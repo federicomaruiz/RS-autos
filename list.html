@@ -6,8 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RS Autos</title>
-    <!-- <link rel="stylesheet" href="list.css"> -->
-    <script src="list.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -15,16 +14,19 @@
 
     </div>
     <div class="container">
+
         <input type="text" autocomplete="off" formcontrolname="search" class="" id="search"
             placeholder="Buscá por marca, modelo, año, color…" maxlength="100">
 
+        <input id="btBuscar" class="" type="button" value="Buscar">
+
         <form action="">
             <p>Autos usados</p>
-            <input id="mostras-filtros" type="button" value="Mostrar filtros">
-            <input id="ocultar-filtros" type="button" value="Ocultar filtros">
+            <input id="mostrarFiltros" type="button" value="Mostrar filtros">
+            <input id="ocultarFiltros" type="button" value="Ocultar filtros">
             <input id="limpiar" type="button" value="limpiar">
             <div class="form-group">
-                <select id="year" name="year" class="custom-select">
+                <select id="ano" name="ano" class="select">
                     <option value=""> Año </option>
                     <option value="2002"> 2002 </option>
                     <option value="2003"> 2003 </option>
@@ -50,9 +52,10 @@
                 </select>
             </div>
             <div class="form-group">
-                <select id="marker" name="maker" class="custom-select">
+                <select id="marca" name="marca" class="select">
                     <option value=""> Marca </option>
                     <option value="GREAT WALL"> GREAT WALL </option>
+                    <option value="Peugeot"> PEUGEOT</option>
                     <option value="TATA"> TATA </option>
                     <option value="CADILLAC"> CADILLAC </option>
                     <option value="CHEVROLET"> CHEVROLET </option>
@@ -62,7 +65,7 @@
                     <option value="DODGE"> DODGE </option>
                     <option value="CHERY"> CHERY </option>
                     <option value="FIAT"> FIAT </option>
-                    <option value="FORD"> FORD </option>
+                    <option value="Ford"> FORD </option>
                     <option value="LIFAN"> LIFAN </option>
                     <option value="HONDA"> HONDA </option>
                     <option value="ZOTYE"> ZOTYE </option>
@@ -137,17 +140,17 @@
                 </select>
             </div>
             <div class="form-group">
-                <select id="model" name="model" disabled="disabled" class="custom-select">
+                <select id="modelo" name="modelo" disabled="disabled" class="select">
                     <option value=""> Modelo </option>
                 </select>
             </div>
             <div class="form-group">
-                <select id="version" name="version" disabled="disabled" class="custom-select">
+                <select id="version" name="version" disabled="disabled" class="select">
                     <option value=""> Versión </option>
                 </select>
             </div>
             <div class="form-group">
-                <select id="km" name="km" class="custom-select">
+                <select id="km" name="km" class="select">
                     <option value=""> Kilometraje </option>
                     <option value="5000"> 5000 </option>
                     <option value="10000"> 10000 </option>
@@ -168,15 +171,61 @@
                     <option value="500000"> 500000 </option>
                 </select>
             </div>
-            <div class="form-group"></div>
-            <div class="form-group"></div>
+            <!-- <app-accordion-group _ngcontent-serverapp-c120="" _nghost-serverapp-c56="">
+                <div _ngcontent-serverapp-c56="" class="accordion">
+                    <h3 _ngcontent-serverapp-c56="" type="button" class="accordion-label"
+                        data-cy="btn-accordion-precio">
+                        Precio <kavak-svg _ngcontent-serverapp-c56=""
+                            img="<svg viewBox=&quot;0 0 1024 1024&quot;><path d=&quot;M962.819 676.155L547.606 251.284c-19.313-19.313-48.281-19.313-67.593 0L64.8 676.155c-19.313 19.313-19.313 48.281 0 67.593l28.968 28.968c19.313 19.313 48.281 19.313 67.593 0L513.81 410.61l347.622 362.106c19.313 19.313 48.281 19.313 67.593 0l33.797-28.968c14.484-19.313 14.484-48.281 0-67.593z&quot;/></svg>"
+                            color="primary" width="1rem" class="sc-kavak-svg-h sc-kavak-svg-s hydrated" role="img"
+                            aria-hidden="true" style="width: 1rem;">
+                            <div class="kavak-svg sc-kavak-svg" style="width: 1rem;"><svg
+                                    style="fill: var(--primary); height: inherit; width: inherit;"
+                                    viewBox="0 0 1024 1024">
+                                    <path
+                                        d="M962.819 676.155L547.606 251.284c-19.313-19.313-48.281-19.313-67.593 0L64.8 676.155c-19.313 19.313-19.313 48.281 0 67.593l28.968 28.968c19.313 19.313 48.281 19.313 67.593 0L513.81 410.61l347.622 362.106c19.313 19.313 48.281 19.313 67.593 0l33.797-28.968c14.484-19.313 14.484-48.281 0-67.593z">
+                                    </path>
+                                </svg></div>
+                        </kavak-svg>
+                    </h3>
+                    <div _ngcontent-serverapp-c56="" class="accordion-content">
+                        <app-facet-range _ngcontent-serverapp-c120="" minlabel="Precio mínimo" maxlabel="Precio máximo"
+                            apptrackevent="" _nghost-serverapp-c113="">
+                            <div _ngcontent-serverapp-c113="" class="form-wrapper">
+                                <div _ngcontent-serverapp-c113="" class="filter-form-group" data-content="$"><label
+                                        _ngcontent-serverapp-c113="" class="sr-only" for="min-final_price">Precio
+                                        mínimo</label><input _ngcontent-serverapp-c113="" type="tel" appintegermask=""
+                                        class="filter-form-control" id="min-final_price" maxlength="10"
+                                        data-cy="input-range-min-price"></div>
+                                <div _ngcontent-serverapp-c113="" class="filter-form-group" data-content="$"><label
+                                        _ngcontent-serverapp-c113="" class="sr-only" for="max-final_price">Precio
+                                        máximo</label><input _ngcontent-serverapp-c113="" type="tel" appintegermask=""
+                                        class="filter-form-control" id="max-final_price" maxlength="10"
+                                        data-cy="input-range-max-price"></div>
+                            </div>
+                            <app-slider _ngcontent-serverapp-c113="" class="range-slider" _nghost-serverapp-c112="">
+                                <div _ngcontent-serverapp-c112="" role="group" aria-label="slider" class="slider"
+                                    style="--ceil:100; --floor:0; --max:100; --min:0;"><span
+                                        _ngcontent-serverapp-c112="" class="track"></span><label
+                                        _ngcontent-serverapp-c112="" class="sr-only"
+                                        for="final_price-floor"></label><input _ngcontent-serverapp-c112="" type="range"
+                                        id="final_pricefloor" min="0" max="100" step="0.000011596890688056281"><label
+                                        _ngcontent-serverapp-c112="" class="sr-only"
+                                        for="final_price-ceil"></label><input _ngcontent-serverapp-c112="" type="range"
+                                        id="final_priceceil" min="0" max="100" step="0.000011596890688056281">
+
+                                </div>
+                            </app-slider>
+                        </app-facet-range>
+                    </div>
+                </div>
+            </app-accordion-group> -->
         </form>
         <div id="lista" class="lista-autos">
-            
-            
+
         </div>
     </div>
-    
+    <script src="list.js"></script>
 </body>
 
 </html>
