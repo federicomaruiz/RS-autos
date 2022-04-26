@@ -1,7 +1,6 @@
 const form = document.getElementById("form");
 const busqueda = document.getElementById("search");
 
-
 const selectAno = document.getElementById("ano");
 const selectModelo = document.getElementById("modelo");
 const selectVersion = document.getElementById("version");
@@ -11,13 +10,13 @@ const selectMarca = document.getElementById("marca");
 const btClear = document.getElementById("limpiar");
 const btMostrarFiltros = document.getElementById("mostrarFiltros");
 const btOcultarFiltros = document.getElementById("ocultarFiltros");
-const btBuscar = document.getElementById("btBuscar")
+const btBuscar = document.getElementById("btBuscar");
 
 var autosFiltrados;
 let autos;
 let marca;
 let ano;
-
+let modelo;
 
 /* filtro de marca por peticion 
 async function searchList() {
@@ -75,43 +74,55 @@ function limpiar() {
   selectKm.value = "";
   busqueda.value = "";
 
-  search()
-  
+  search();
 }
 
 selectMarca.addEventListener("change", () => {
-  
   marca = selectMarca.value;
 
   // numbers.filter(number => number > 10 )
   // mirar mayusculas minusculas de value == para que coincidan marca modelo etc
   // usar if else para concatenar mas de un filtro al mismo tiempo
 
-  autosFiltrados = autos.data.filter( auto => auto.attributes.marca == marca); 
+  autosFiltrados = autos.data.filter((auto) => auto.attributes.marca == marca);
 
   console.log(autosFiltrados);
 
   mostrarModelo();
-
-
 });
 
 selectAno.addEventListener("change", () => {
   ano = selectAno.value;
 
   // seguir aca mirar como mostrar despues del filtro //
-  autosFiltrados = autos.data.filter( auto => auto.attributes.ano == ano); 
+  autosFiltrados = autos.data.filter((auto) => auto.attributes.ano == ano);
 
   lista.value = autosFiltrados;
 
   mostrarModelo();
+});
 
+selectModelo.addEventListener("change", () => {
+  modelo = selectModelo.value;
 
+  autosFiltrados = autos.data.filter(
+    (auto) => auto.attributes.modelo == modelo
+  );
+
+  console.log(autosFiltrados);
+
+  mostrarVersion();
 });
 
 function mostrarModelo() {
   if (marca && ano) {
     selectModelo.disabled = false;
+  }
+}
+
+function mostrarVersion() {
+  if (marca && ano && modelo) {
+    selectVersion.disabled = false;
   }
 }
 
@@ -124,8 +135,8 @@ async function search() {
       const message = `Error: ${response.status}`;
       throw new Error(message);
     }
-      console.log(autosFiltrados)
-   /*
+    console.log(autosFiltrados);
+    /*
           IDEA
    
     if (autosFiltrados != null ){
@@ -136,15 +147,10 @@ async function search() {
 
     printData(autos);
     console.log(autos);
-    
-
   } catch (error) {
     console.log(error);
   }
-
-  
 }
-
 
 function printData(autos) {
   rellenarModelo();
@@ -152,6 +158,14 @@ function printData(autos) {
   lista.innerHTML = "";
 
   for (const auto of autos.data) {
+    // falta agregar version tambien en BBDD
+
+    const div1 = document.createElement("div");
+    const div2 = document.createElement("div");
+    const div3 = document.createElement("div");
+    const div4 = document.createElement("div");
+    const div5 = document.createElement("div");
+    const div6 = document.createElement("div");
 
     const a = document.createElement("a");
     const pMarca = document.createElement("p");
@@ -159,6 +173,7 @@ function printData(autos) {
     const pAno = document.createElement("p");
     const pKm = document.createElement("p");
     const pPrecio = document.createElement("p");
+    const pMotor = document.createElement("p");
     const img = document.createElement("img");
 
     pMarca.textContent = auto.attributes.marca;
@@ -166,32 +181,87 @@ function printData(autos) {
     pAno.textContent = auto.attributes.ano;
     pKm.textContent = auto.attributes.kilometros;
     pPrecio.textContent = auto.attributes.precio;
+    pMotor.textContent = auto.attributes.motor;
     img.src = auto.attributes.imagen;
 
     a.href = `detail.html?id=${auto.id}`;
+
+    lista.appendChild(div1);
+    lista.appendChild(div2);
+    lista.appendChild(div3);
+    lista.appendChild(div4);
+    lista.appendChild(div5);
+    lista.appendChild(div6);
+
+    div1.classList.add("div1");
+    div2.classList.add("div2");
+    div3.classList.add("div3");
+    div4.classList.add("div4");
+    div5.classList.add("div5");
+    div6.classList.add("div6");
 
     lista.appendChild(pMarca);
     lista.appendChild(pModelo);
     lista.appendChild(pAno);
     lista.appendChild(pKm);
     lista.appendChild(pPrecio);
+    lista.appendChild(pMotor);
     lista.appendChild(img);
+
+    div1.appendChild(pMarca);
+    div1.appendChild(pModelo);
+    div1.appendChild(pAno);
+    div1.appendChild(pKm);
+    div1.appendChild(pPrecio);
+    div1.appendChild(pMotor);
+    div1.appendChild(img);
+    div1.appendChild(a);
+
+    div1.appendChild(div2);
+    div1.appendChild(div3);
+    div1.appendChild(div4);
+    div1.appendChild(div5);
+    div1.appendChild(div6);
+
+    div2.appendChild(img);
+
+    div3.appendChild(pMarca);
+    div3.appendChild(pModelo);
+    div3.appendChild(pAno);
+    div3.appendChild(pKm);
+    div3.appendChild(pPrecio);
+    div3.appendChild(pMotor);
+    div3.appendChild(a);
+
+    div3.appendChild(div4);
+    div3.appendChild(div5);
+    div3.appendChild(div6);
+
+    div4.appendChild(pPrecio);
+
+    div5.appendChild(pAno);
+    div5.appendChild(pKm);
+
+    div6.appendChild(pMarca);
+    div6.appendChild(pModelo);
+    div6.appendChild(pMotor);
+    // div6.appendChild(pVersion);
 
     a.appendChild(pMarca);
     a.appendChild(pModelo);
 
     lista.appendChild(a);
+
+    
   }
 }
 search();
 
 function rellenarModelo() {
-  for (const x of autos.data) {
+  for (const auto of autos.data) {
     var opt = document.createElement("option");
-    opt.value = x.attributes.modelo;
-    opt.innerHTML = x.attributes.modelo;
+    opt.value = auto.attributes.modelo;
+    opt.innerHTML = auto.attributes.modelo;
     selectModelo.appendChild(opt);
   }
 }
-
-

@@ -7,171 +7,207 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RS Autos</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="list.css">
+    <!-- <link rel="stylesheet" type="text/css" href="splide-4.0.1/dist/css/themes/splide-default.min.css">
+    <link rel="stylesheet" type="text/css" href="splide-4.0.1/dist/css/core.min.css"> -->
 </head>
 
 <body>
-    <div class="navegacion">
+    <div class="bg-head">
+
+        <nav class="navigation container">
+            <div class="box-logo">
+                <a href="#">
+                    <img class="logo" src="images/image1.png" alt="logotipo">
+                    <p class="logo-txt"></p>
+                </a>
+            </div>
+
+            <div class="box-links">
+                <a href="index.html">Inicio</a>
+                <a href="we.html">Nosotros</a>
+                <a href="list.html">Compra un auto</a>
+                <a href="/">Vende tu auto</a>
+                <div class="dropdown">
+
+                    <button class="box links dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Mi cuenta
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <button class="dropdown-item" type="button">Registrate</button>
+                        <button class="dropdown-item" type="button">Iniciar sesión</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </nav>
+
 
     </div>
     <div class="container">
 
-        <input type="text" autocomplete="off" formcontrolname="search" class="" id="search"
-            placeholder="Buscá por marca, modelo, año, color…" maxlength="100">
+        <div class="divFiltros">
 
-        <input id="btBuscar" class="" type="button" value="Buscar">
+            <input type="text" autocomplete="off" formcontrolname="search" class="" id="search"
+                placeholder="Buscá por marca, modelo, año, color…" maxlength="100">
 
-        <form action="">
-            <p>Autos usados</p>
-            <input id="mostrarFiltros" type="button" value="Mostrar filtros">
-            <input id="ocultarFiltros" type="button" value="Ocultar filtros">
-            <input id="limpiar" type="button" value="limpiar">
-            <div class="form-group">
-                <select id="ano" name="ano" class="select">
-                    <option value=""> Año </option>
-                    <option value="2002"> 2002 </option>
-                    <option value="2003"> 2003 </option>
-                    <option value="2004"> 2004 </option>
-                    <option value="2005"> 2005 </option>
-                    <option value="2006"> 2006 </option>
-                    <option value="2007"> 2007 </option>
-                    <option value="2008"> 2008 </option>
-                    <option value="2009"> 2009 </option>
-                    <option value="2010"> 2010 </option>
-                    <option value="2011"> 2011 </option>
-                    <option value="2012"> 2012 </option>
-                    <option value="2013"> 2013 </option>
-                    <option value="2014"> 2014 </option>
-                    <option value="2015"> 2015 </option>
-                    <option value="2016"> 2016 </option>
-                    <option value="2017"> 2017 </option>
-                    <option value="2018"> 2018 </option>
-                    <option value="2019"> 2019 </option>
-                    <option value="2020"> 2020 </option>
-                    <option value="2021"> 2021 </option>
-                    <option value="2022"> 2022 </option>
-                </select>
-            </div>
-            <div class="form-group">
-                <select id="marca" name="marca" class="select">
-                    <option value=""> Marca </option>
-                    <option value="GREAT WALL"> GREAT WALL </option>
-                    <option value="Peugeot"> PEUGEOT</option>
-                    <option value="TATA"> TATA </option>
-                    <option value="CADILLAC"> CADILLAC </option>
-                    <option value="CHEVROLET"> CHEVROLET </option>
-                    <option value="CHRYSLER"> CHRYSLER </option>
-                    <option value="CITROEN"> CITROEN </option>
-                    <option value="ALFA ROMEO"> ALFA ROMEO </option>
-                    <option value="DODGE"> DODGE </option>
-                    <option value="CHERY"> CHERY </option>
-                    <option value="FIAT"> FIAT </option>
-                    <option value="Ford"> FORD </option>
-                    <option value="LIFAN"> LIFAN </option>
-                    <option value="HONDA"> HONDA </option>
-                    <option value="ZOTYE"> ZOTYE </option>
-                    <option value="HYUNDAI"> HYUNDAI </option>
-                    <option value="JEEP"> JEEP </option>
-                    <option value="KIA"> KIA </option>
-                    <option value="LAND ROVER"> LAND ROVER </option>
-                    <option value="DAIHATSU"> DAIHATSU </option>
-                    <option value="LEXUS"> LEXUS </option>
-                    <option value="MINI"> MINI </option>
-                    <option value="PORSCHE"> PORSCHE </option>
-                    <option value="SSANGYONG"> SSANGYONG </option>
-                    <option value="MAZDA"> MAZDA </option>
-                    <option value="SUZUKI"> SUZUKI </option>
-                    <option value="MERCEDES BENZ"> MERCEDES BENZ </option>
-                    <option value="DAYANG"> DAYANG </option>
-                    <option value="DONGFENG"> DONGFENG </option>
-                    <option value="MITSUBISHI"> MITSUBISHI </option>
-                    <option value="JMC"> JMC </option>
-                    <option value="FOTON"> FOTON </option>
-                    <option value="CHANGHE"> CHANGHE </option>
-                    <option value="AUDI"> AUDI </option>
-                    <option value="NISSAN"> NISSAN </option>
-                    <option value="SOUEAST"> SOUEAST </option>
-                    <option value="HANTENG"> HANTENG </option>
-                    <option value="BRILLIANCE"> BRILLIANCE </option>
-                    <option value="ENRANGER"> ENRANGER </option>
-                    <option value="BYD"> BYD </option>
-                    <option value="UAZ"> UAZ </option>
-                    <option value="MAHINDRA"> MAHINDRA </option>
-                    <option value="DOMY"> DOMY </option>
-                    <option value="CHANGAN"> CHANGAN </option>
-                    <option value="HAVAL"> HAVAL </option>
-                    <option value="RAM"> RAM </option>
-                    <option value="PEUGEOT"> PEUGEOT </option>
-                    <option value="RENAULT"> RENAULT </option>
-                    <option value="TOYOTA"> TOYOTA </option>
-                    <option value="VOLKSWAGEN"> VOLKSWAGEN </option>
-                    <option value="VOLVO"> VOLVO </option>
-                    <option value="SKODA"> SKODA </option>
-                    <option value="BMW"> BMW </option>
-                    <option value="BAIC"> BAIC </option>
-                    <option value="BAW"> BAW </option>
-                    <option value="BMW "> BMW </option>
-                    <option value="CHANGHE SUZUKI"> CHANGHE SUZUKI </option>
-                    <option value="CHOK"> CHOK </option>
-                    <option value="D.F.P.V. (DONGFENG)"> D.F.P.V. (DONGFENG) </option>
-                    <option value="D.F.S.K. (DONGFENG)"> D.F.S.K. (DONGFENG) </option>
-                    <option value="DS AUTOMOBILES"> DS AUTOMOBILES </option>
-                    <option value="F.A.W."> F.A.W. </option>
-                    <option value="FODAY"> FODAY </option>
-                    <option value="GAC MOTOR"> GAC MOTOR </option>
-                    <option value="GEELY"> GEELY </option>
-                    <option value="HAFEI"> HAFEI </option>
-                    <option value="HH HUANGHAI"> HH HUANGHAI </option>
-                    <option value="JAC AUTOS"> JAC AUTOS </option>
-                    <option value="JAC MOTORS"> JAC MOTORS </option>
-                    <option value="JETOUR"> JETOUR </option>
-                    <option value="JINBEI"> JINBEI </option>
-                    <option value="KEYTON"> KEYTON </option>
-                    <option value="LADA"> LADA </option>
-                    <option value="Landwind"> Landwind </option>
-                    <option value="MASERATI"> MASERATI </option>
-                    <option value="MG MOTOR"> MG MOTOR </option>
-                    <option value="OPEL"> OPEL </option>
-                    <option value="QMC"> QMC </option>
-                    <option value="SEAT"> SEAT </option>
-                    <option value="SHINERAY"> SHINERAY </option>
-                    <option value="SKYWELL"> SKYWELL </option>
-                    <option value="WEICHAI MOTOR"> WEICHAI MOTOR </option>
-                    <option value="ZX AUTO"> ZX AUTO </option>
-                </select>
-            </div>
-            <div class="form-group">
-                <select id="modelo" name="modelo" disabled="disabled" class="select">
-                    <option value=""> Modelo </option>
-                </select>
-            </div>
-            <div class="form-group">
-                <select id="version" name="version" disabled="disabled" class="select">
-                    <option value=""> Versión </option>
-                </select>
-            </div>
-            <div class="form-group">
-                <select id="km" name="km" class="select">
-                    <option value=""> Kilometraje </option>
-                    <option value="5000"> 5000 </option>
-                    <option value="10000"> 10000 </option>
-                    <option value="20000"> 20000 </option>
-                    <option value="30000"> 30000 </option>
-                    <option value="40000"> 40000 </option>
-                    <option value="50000"> 50000 </option>
-                    <option value="60000"> 60000 </option>
-                    <option value="70000"> 70000 </option>
-                    <option value="80000"> 80000 </option>
-                    <option value="90000"> 90000 </option>
-                    <option value="100000"> 100000 </option>
-                    <option value="125000"> 125000 </option>
-                    <option value="150000"> 150000 </option>
-                    <option value="200000"> 200000 </option>
-                    <option value="300000"> 300000 </option>
-                    <option value="400000"> 400000 </option>
-                    <option value="500000"> 500000 </option>
-                </select>
-            </div>
-            <!-- <app-accordion-group _ngcontent-serverapp-c120="" _nghost-serverapp-c56="">
+            <input id="btBuscar" class="" type="button" value="Buscar">
+
+            <form action="">
+                <p>Autos usados</p>
+                <input id="mostrarFiltros" type="button" value="Mostrar filtros">
+                <input id="ocultarFiltros" type="button" value="Ocultar filtros">
+                <input id="limpiar" type="button" value="limpiar">
+                <div class="form-group">
+                    <select id="ano" name="ano" class="select">
+                        <option value=""> Año </option>
+                        <option value="2002"> 2002 </option>
+                        <option value="2003"> 2003 </option>
+                        <option value="2004"> 2004 </option>
+                        <option value="2005"> 2005 </option>
+                        <option value="2006"> 2006 </option>
+                        <option value="2007"> 2007 </option>
+                        <option value="2008"> 2008 </option>
+                        <option value="2009"> 2009 </option>
+                        <option value="2010"> 2010 </option>
+                        <option value="2011"> 2011 </option>
+                        <option value="2012"> 2012 </option>
+                        <option value="2013"> 2013 </option>
+                        <option value="2014"> 2014 </option>
+                        <option value="2015"> 2015 </option>
+                        <option value="2016"> 2016 </option>
+                        <option value="2017"> 2017 </option>
+                        <option value="2018"> 2018 </option>
+                        <option value="2019"> 2019 </option>
+                        <option value="2020"> 2020 </option>
+                        <option value="2021"> 2021 </option>
+                        <option value="2022"> 2022 </option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select id="marca" name="marca" class="select">
+                        <option value=""> Marca </option>
+                        <option value="GREAT WALL"> GREAT WALL </option>
+                        <option value="Peugeot"> PEUGEOT</option>
+                        <option value="TATA"> TATA </option>
+                        <option value="CADILLAC"> CADILLAC </option>
+                        <option value="CHEVROLET"> CHEVROLET </option>
+                        <option value="CHRYSLER"> CHRYSLER </option>
+                        <option value="CITROEN"> CITROEN </option>
+                        <option value="ALFA ROMEO"> ALFA ROMEO </option>
+                        <option value="DODGE"> DODGE </option>
+                        <option value="CHERY"> CHERY </option>
+                        <option value="FIAT"> FIAT </option>
+                        <option value="Ford"> FORD </option>
+                        <option value="LIFAN"> LIFAN </option>
+                        <option value="HONDA"> HONDA </option>
+                        <option value="ZOTYE"> ZOTYE </option>
+                        <option value="HYUNDAI"> HYUNDAI </option>
+                        <option value="JEEP"> JEEP </option>
+                        <option value="KIA"> KIA </option>
+                        <option value="LAND ROVER"> LAND ROVER </option>
+                        <option value="DAIHATSU"> DAIHATSU </option>
+                        <option value="LEXUS"> LEXUS </option>
+                        <option value="MINI"> MINI </option>
+                        <option value="PORSCHE"> PORSCHE </option>
+                        <option value="SSANGYONG"> SSANGYONG </option>
+                        <option value="MAZDA"> MAZDA </option>
+                        <option value="SUZUKI"> SUZUKI </option>
+                        <option value="MERCEDES BENZ"> MERCEDES BENZ </option>
+                        <option value="DAYANG"> DAYANG </option>
+                        <option value="DONGFENG"> DONGFENG </option>
+                        <option value="MITSUBISHI"> MITSUBISHI </option>
+                        <option value="JMC"> JMC </option>
+                        <option value="FOTON"> FOTON </option>
+                        <option value="CHANGHE"> CHANGHE </option>
+                        <option value="AUDI"> AUDI </option>
+                        <option value="NISSAN"> NISSAN </option>
+                        <option value="SOUEAST"> SOUEAST </option>
+                        <option value="HANTENG"> HANTENG </option>
+                        <option value="BRILLIANCE"> BRILLIANCE </option>
+                        <option value="ENRANGER"> ENRANGER </option>
+                        <option value="BYD"> BYD </option>
+                        <option value="UAZ"> UAZ </option>
+                        <option value="MAHINDRA"> MAHINDRA </option>
+                        <option value="DOMY"> DOMY </option>
+                        <option value="CHANGAN"> CHANGAN </option>
+                        <option value="HAVAL"> HAVAL </option>
+                        <option value="RAM"> RAM </option>
+                        <option value="PEUGEOT"> PEUGEOT </option>
+                        <option value="RENAULT"> RENAULT </option>
+                        <option value="TOYOTA"> TOYOTA </option>
+                        <option value="VOLKSWAGEN"> VOLKSWAGEN </option>
+                        <option value="VOLVO"> VOLVO </option>
+                        <option value="SKODA"> SKODA </option>
+                        <option value="BMW"> BMW </option>
+                        <option value="BAIC"> BAIC </option>
+                        <option value="BAW"> BAW </option>
+                        <option value="BMW "> BMW </option>
+                        <option value="CHANGHE SUZUKI"> CHANGHE SUZUKI </option>
+                        <option value="CHOK"> CHOK </option>
+                        <option value="D.F.P.V. (DONGFENG)"> D.F.P.V. (DONGFENG) </option>
+                        <option value="D.F.S.K. (DONGFENG)"> D.F.S.K. (DONGFENG) </option>
+                        <option value="DS AUTOMOBILES"> DS AUTOMOBILES </option>
+                        <option value="F.A.W."> F.A.W. </option>
+                        <option value="FODAY"> FODAY </option>
+                        <option value="GAC MOTOR"> GAC MOTOR </option>
+                        <option value="GEELY"> GEELY </option>
+                        <option value="HAFEI"> HAFEI </option>
+                        <option value="HH HUANGHAI"> HH HUANGHAI </option>
+                        <option value="JAC AUTOS"> JAC AUTOS </option>
+                        <option value="JAC MOTORS"> JAC MOTORS </option>
+                        <option value="JETOUR"> JETOUR </option>
+                        <option value="JINBEI"> JINBEI </option>
+                        <option value="KEYTON"> KEYTON </option>
+                        <option value="LADA"> LADA </option>
+                        <option value="Landwind"> Landwind </option>
+                        <option value="MASERATI"> MASERATI </option>
+                        <option value="MG MOTOR"> MG MOTOR </option>
+                        <option value="OPEL"> OPEL </option>
+                        <option value="QMC"> QMC </option>
+                        <option value="SEAT"> SEAT </option>
+                        <option value="SHINERAY"> SHINERAY </option>
+                        <option value="SKYWELL"> SKYWELL </option>
+                        <option value="WEICHAI MOTOR"> WEICHAI MOTOR </option>
+                        <option value="ZX AUTO"> ZX AUTO </option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select id="modelo" name="modelo" disabled="disabled" class="select">
+                        <option value=""> Modelo </option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select id="version" name="version" disabled="disabled" class="select">
+                        <option value=""> Versión </option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select id="km" name="km" class="select">
+                        <option value=""> Kilometraje </option>
+                        <option value="5000"> 5000 </option>
+                        <option value="10000"> 10000 </option>
+                        <option value="20000"> 20000 </option>
+                        <option value="30000"> 30000 </option>
+                        <option value="40000"> 40000 </option>
+                        <option value="50000"> 50000 </option>
+                        <option value="60000"> 60000 </option>
+                        <option value="70000"> 70000 </option>
+                        <option value="80000"> 80000 </option>
+                        <option value="90000"> 90000 </option>
+                        <option value="100000"> 100000 </option>
+                        <option value="125000"> 125000 </option>
+                        <option value="150000"> 150000 </option>
+                        <option value="200000"> 200000 </option>
+                        <option value="300000"> 300000 </option>
+                        <option value="400000"> 400000 </option>
+                        <option value="500000"> 500000 </option>
+                    </select>
+                </div>
+                <!-- <app-accordion-group _ngcontent-serverapp-c120="" _nghost-serverapp-c56="">
                 <div _ngcontent-serverapp-c56="" class="accordion">
                     <h3 _ngcontent-serverapp-c56="" type="button" class="accordion-label"
                         data-cy="btn-accordion-precio">
@@ -220,9 +256,11 @@
                     </div>
                 </div>
             </app-accordion-group> -->
-        </form>
-        <div id="lista" class="lista-autos">
+            </form>
+            <div id="lista" class="lista-autos">
 
+
+            </div>
         </div>
     </div>
     <script src="list.js"></script>

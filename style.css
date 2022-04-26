@@ -222,3 +222,30 @@ footer p {
     height:800px;
    
 }
+
+.divCentral{
+
+    background-image: url("images/fondo.jpg");
+    background-position:center;
+    background-size: cover;
+    width: 100%;
+    height:650px;
+
+}
+/*
+.divIzquierda{
+    float: left;
+    width:35%;
+    height:600px;
+    background-color:rgb(246, 121, 121);
+
+}
+.divDerecha{
+    background-image: url("images/fondo.jpg");
+    background-position: center;
+    background-size: cover;
+    float:right;
+    width:65%;
+    height: 600px;
+
+} */

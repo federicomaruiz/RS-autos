@@ -2,6 +2,12 @@ const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get("id");
 const lista = document.getElementById("lista");
 
+const sectionCarrucel = document.getElementById("thumbnail-carousel");
+const divCarrucel = document.getElementById("divCarrucel");
+const ulCarrucel = document.getElementById("ulCarrucel");
+const liCarrucel = document.getElementById("liCarrucel");
+
+
 async function getCar() {
   try {
     const url = `http://localhost:1337/api/autos/${id}`;
@@ -37,6 +43,7 @@ function printData(auto) {
   const pPrecio = document.createElement("p");
   const img = document.createElement("img");
  
+// falta agregar version, tambien en base de datos
 
   pMarca.textContent = auto.data.attributes.marca;
   pModelo.textContent = auto.data.attributes.modelo;
@@ -69,10 +76,16 @@ function printData(auto) {
 
     const imagen = document.createElement("img")
 
+    // const liCarrucel = document.createElement("li")
+
+    // liCarrucel.className = "splide__slide";
+
     imagen.src = x;
 
-  
-    lista.appendChild(imagen);
+    sectionCarrucel.appendChild(divCarrucel);
+    divCarrucel.appendChild(ulCarrucel);
+    ulCarrucel.appendChild(liCarrucel);
+    liCarrucel.appendChild(imagen);
 
   }
 
