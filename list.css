@@ -1,0 +1,19 @@
+.divFiltros{
+
+    width:30%;
+    height:500px;
+    float:left;
+    display:block;
+
+};
+.lista-autos{
+    display:flex;
+    float:right;
+    width:70%;
+}
+
+.div1{
+
+   background:rgb(146, 142, 142) ;
+
+};
