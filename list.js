@@ -88,7 +88,10 @@ selectMarca.addEventListener("change", () => {
 
   console.log(autosFiltrados);
 
+  printData(autosFiltrados);
+
   mostrarModelo();
+  
 });
 
 selectAno.addEventListener("change", () => {
@@ -153,9 +156,19 @@ async function search() {
 }
 
 function printData(autos) {
+
+  rellenarMarca();
+  rellenarAno();
   rellenarModelo();
+  rellenarVersion();
+
   const lista = document.getElementById("lista");
   lista.innerHTML = "";
+
+  // haciendo un if (autosFiltrados == "") mostrar todos los autos sino mostrar autosFiltrados ( quiero mostrar solo los filtrados)
+  // y que los filtros vayan haciendo efectos unos sobre otros año y marca, sobre modelo version
+
+
 
   for (const auto of autos.data) {
     // falta agregar version tambien en BBDD
@@ -174,6 +187,7 @@ function printData(autos) {
     const pKm = document.createElement("p");
     const pPrecio = document.createElement("p");
     const pMotor = document.createElement("p");
+    const pVersion = document.createElement("p");
     const img = document.createElement("img");
 
     pMarca.textContent = auto.attributes.marca;
@@ -182,9 +196,12 @@ function printData(autos) {
     pKm.textContent = auto.attributes.kilometros;
     pPrecio.textContent = auto.attributes.precio;
     pMotor.textContent = auto.attributes.motor;
+    pVersion.textContent = auto.attributes.version;
     img.src = auto.attributes.imagen;
 
     a.href = `detail.html?id=${auto.id}`;
+
+    
 
     lista.appendChild(div1);
     lista.appendChild(div2);
@@ -200,22 +217,30 @@ function printData(autos) {
     div5.classList.add("div5");
     div6.classList.add("div6");
 
+    lista.appendChild(a);
     lista.appendChild(pMarca);
     lista.appendChild(pModelo);
     lista.appendChild(pAno);
     lista.appendChild(pKm);
     lista.appendChild(pPrecio);
     lista.appendChild(pMotor);
+    lista.appendChild(pVersion);
     lista.appendChild(img);
+    
 
+  
     div1.appendChild(pMarca);
     div1.appendChild(pModelo);
     div1.appendChild(pAno);
     div1.appendChild(pKm);
     div1.appendChild(pPrecio);
     div1.appendChild(pMotor);
+    div1.appendChild(pVersion);
     div1.appendChild(img);
     div1.appendChild(a);
+
+   
+   
 
     div1.appendChild(div2);
     div1.appendChild(div3);
@@ -223,15 +248,18 @@ function printData(autos) {
     div1.appendChild(div5);
     div1.appendChild(div6);
 
+    a.appendChild(div2);
     div2.appendChild(img);
-
+    
+    a.appendChild(div3);
     div3.appendChild(pMarca);
     div3.appendChild(pModelo);
     div3.appendChild(pAno);
     div3.appendChild(pKm);
     div3.appendChild(pPrecio);
     div3.appendChild(pMotor);
-    div3.appendChild(a);
+    div3.appendChild(pVersion);
+    
 
     div3.appendChild(div4);
     div3.appendChild(div5);
@@ -245,17 +273,33 @@ function printData(autos) {
     div6.appendChild(pMarca);
     div6.appendChild(pModelo);
     div6.appendChild(pMotor);
+    div6.appendChild(pVersion);
     // div6.appendChild(pVersion);
 
-    a.appendChild(pMarca);
-    a.appendChild(pModelo);
+   
 
-    lista.appendChild(a);
-
-    
+   
   }
 }
 search();
+
+function rellenarMarca() {
+  for (const auto of autos.data) {
+    var opt = document.createElement("option");
+    opt.value = auto.attributes.marca;
+    opt.innerHTML = auto.attributes.marca;
+    selectMarca.appendChild(opt);
+  }
+}
+
+function rellenarAno() {
+  for (const auto of autos.data) {
+    var opt = document.createElement("option");
+    opt.value = auto.attributes.ano;
+    opt.innerHTML = auto.attributes.ano;
+    selectAno.appendChild(opt);
+  }
+}
 
 function rellenarModelo() {
   for (const auto of autos.data) {
@@ -263,5 +307,14 @@ function rellenarModelo() {
     opt.value = auto.attributes.modelo;
     opt.innerHTML = auto.attributes.modelo;
     selectModelo.appendChild(opt);
+  }
+}
+
+function rellenarVersion() {
+  for (const auto of autos.data) {
+    var opt = document.createElement("option");
+    opt.value = auto.attributes.version;
+    opt.innerHTML = auto.attributes.version;
+    selectVersion.appendChild(opt);
   }
 }
