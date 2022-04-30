@@ -7,6 +7,17 @@ const divCarrucel = document.getElementById("divCarrucel");
 const ulCarrucel = document.getElementById("ulCarrucel");
 const liCarrucel = document.getElementById("liCarrucel");
 
+const tdMarca = document.getElementById("tdMarca");
+const tdModelo = document.getElementById("tdModelo");
+const tdAno = document.getElementById("tdAno");
+const tdColor = document.getElementById("tdColor");
+const tdCombustible = document.getElementById("tdCombustible");
+const tdPuertas = document.getElementById("tdPuertas");
+const tdTransmision = document.getElementById("tdTransmision");
+const tdMotor = document.getElementById("tdMotor");
+const tdCarroceria = document.getElementById("tdCarroceria");
+const tdKm = document.getElementById("tdKm");
+
 
 async function getCar() {
   try {
@@ -30,47 +41,31 @@ function printData(auto) {
   
   lista.innerHTML = "";
 
-  const pMarca = document.createElement("p");
-  const pModelo = document.createElement("p");
-  const pAno = document.createElement("p");
-  const pColor = document.createElement("p");
-  const pCombustible = document.createElement("p");
-  const pPuertas = document.createElement("p");
-  const pTransmision = document.createElement("p");
-  const pMotor = document.createElement("p");
-  const pCarroceria = document.createElement("p");
-  const pKm = document.createElement("p");
   const pPrecio = document.createElement("p");
-  const img = document.createElement("img");
- 
-// falta agregar version, tambien en base de datos
+  // const img = document.createElement("img");
 
-  pMarca.textContent = auto.data.attributes.marca;
-  pModelo.textContent = auto.data.attributes.modelo;
-  pAno.textContent = auto.data.attributes.ano;
-  pColor.textContent =auto.data.attributes.color;
-  pCombustible.textContent =auto.data.attributes.combustible;
-  pPuertas.textContent =auto.data.attributes.puertas;
-  pTransmision.textContent =auto.data.attributes.transmision;
-  pMotor.textContent =auto.data.attributes.motor;
-  pCarroceria.textContent =auto.data.attributes.carroceria;
-  pKm.textContent = auto.data.attributes.kilometros;
+  tdMarca.textContent = auto.data.attributes.marca;
+  tdModelo.textContent = auto.data.attributes.modelo;
+  tdAno.textContent = auto.data.attributes.ano;
+  tdColor.textContent =auto.data.attributes.color;
+  tdCombustible.textContent =auto.data.attributes.combustible;
+  tdPuertas.textContent =auto.data.attributes.puertas;
+  tdTransmision.textContent =auto.data.attributes.transmision;
+  tdMotor.textContent =auto.data.attributes.motor;
+  tdCarroceria.textContent =auto.data.attributes.carroceria;
+  tdKm.textContent = auto.data.attributes.kilometros;
+
+
+
+  
   pPrecio.textContent = auto.data.attributes.precio;
-  img.src = auto.data.attributes.imagen;
+  // img.src = auto.data.attributes.imagen;
   
 
-  lista.appendChild(pMarca);
-  lista.appendChild(pModelo);
-  lista.appendChild(pAno);
-  lista.appendChild(pColor);
-  lista.appendChild(pCombustible);
-  lista.appendChild(pPuertas);
-  lista.appendChild(pTransmision);
-  lista.appendChild(pMotor);
-  lista.appendChild(pCarroceria);
-  lista.appendChild(pKm);
+
+  
   lista.appendChild(pPrecio);
-  lista.appendChild(img);
+  // lista.appendChild(img);
   
   for (const x of auto.data.attributes.imagenes) { 
 

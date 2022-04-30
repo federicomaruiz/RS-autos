@@ -12,6 +12,8 @@ const btMostrarFiltros = document.getElementById("mostrarFiltros");
 const btOcultarFiltros = document.getElementById("ocultarFiltros");
 const btBuscar = document.getElementById("btBuscar");
 
+const divFiltros = document.getElementById("divFiltros");
+
 var autosFiltrados;
 let autos;
 let marca;
@@ -52,6 +54,10 @@ btOcultarFiltros.addEventListener("click", () => {
   selectAno.style.display = "none";
   selectVersion.style.display = "none";
   selectKm.style.display = "none";
+  btOcultarFiltros.style.display = "none";
+  btMostrarFiltros.style.display = "inline-block";
+  divFiltros.style.display = "none";
+  btClear.style.display = "none";
 });
 
 btMostrarFiltros.addEventListener("click", () => {
@@ -60,6 +66,10 @@ btMostrarFiltros.addEventListener("click", () => {
   selectAno.style.display = "inline-block";
   selectVersion.style.display = "inline-block";
   selectKm.style.display = "inline-block";
+  btMostrarFiltros.style.display = "none";
+  btOcultarFiltros.style.display = "inline-block";
+  divFiltros.style.display = "block";
+  btClear.style.display = "inline";
 
   limpiar();
 });
@@ -88,7 +98,7 @@ selectMarca.addEventListener("change", () => {
 
   console.log(autosFiltrados);
 
-  printData(autosFiltrados);
+  // printData(autosFiltrados);
 
   mostrarModelo();
   

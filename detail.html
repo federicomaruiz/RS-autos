@@ -8,9 +8,9 @@
     <title>RS Autos</title>
     <link rel="stylesheet" href="detail.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="carrucelMiniatura.css">
+    <!-- <link rel="stylesheet" href="carrucelMiniatura.css">
     <link rel="stylesheet" type="text/css" href="splide-4.0.1/dist/css/themes/splide-default.min.css">
-    <link rel="stylesheet" type="text/css" href="splide-4.0.1/dist/css/core.min.css">
+    <link rel="stylesheet" type="text/css" href="splide-4.0.1/dist/css/core.min.css"> -->
     <script>
         new Splide('.splide').mount();
     </script>
@@ -23,24 +23,147 @@
 </head>
 
 <body>
+    <div class="bg-head">
 
-    <section id="thumbnail-carousel" class="splide" aria-label="El carrusel de miniaturas">
-        <div id="divCarrucel" class="splide__track">
-            <ul id="ulCarrucel" class="splide__list">
-                <li id="liCarrucel"class="splide__slide"> </li>
-            </ul>
+        <nav class="navigation container">
+            <div class="box-logo">
+                <a href="#">
+                    <img class="logo" src="images/image1.png" alt="logotipo">
+                    <p class="logo-txt"></p>
+                </a>
+            </div>
+
+            <div class="box-links">
+                <a href="index.html">Inicio</a>
+                <a href="we.html">Nosotros</a>
+                <a href="list.html">Compra un auto</a>
+                <a href="/">Cotiza tu auto</a>
+                <a href="/">Contacto</a>
+            </div>
+        </nav>
+    </div>
+
+    <div class="">
+        <section id="thumbnail-carousel" class="splide" aria-label="El carrusel de miniaturas">
+            <div id="divCarrucel" class="splide__track">
+                <ul id="ulCarrucel" class="splide__list">
+                    <li id="liCarrucel" class="splide__slide"> </li>
+                </ul>
+            </div>
+        </section>
+
+
+
+        <div id="lista" class="divDataAutos">
         </div>
-    </section>
-
-    <div class="container">
-
-        <div id="lista" class="car">
-
-        </div>
+        <h2>Características principales</h2>
+        <table id="tableData" class="andes_table">
+            <tbody id="tBody"class="andes-table__body">
+                <tr id="trMarca"class="andes-table__row" rowspan="">
+                    <th
+                        class="">
+                        Marca</th>
+                    <td id="tdMarca" class=""><span
+                            class=""></span></td>
+                </tr>
+                <tr class="" rowspan="">
+                    <th
+                        class="">
+                        Modelo</th>
+                    <td id="tdModelo"class=""><span
+                            class=""></span></td>
+                </tr>
+                <tr class="" rowspan="">
+                    <th
+                        class="">
+                        Año</th>
+                    <td id="tdAno"class=""><span
+                            class=""></span></td>
+                </tr>
+                <tr class="" rowspan="">
+                    <th
+                        class="">
+                        Color</th>
+                    <td id="tdColor"class=""><span
+                            class=""></span></td>
+                </tr>
+                <tr class="" rowspan="">
+                    <th
+                        class="">
+                        Tipo de combustible</th>
+                    <td id="tdCombustible" class=""><span
+                            class=""></span></td>
+                </tr>
+                <tr class="" rowspan="">
+                    <th
+                        class="">
+                        Puertas</th>
+                    <td id="tdPuertas"class=""><span
+                            class=""></span></td>
+                </tr>
+                <tr class="" rowspan="">
+                    <th
+                        class= "">
+                        Transmisión</th>
+                    <td id="tdTransmision"class=""><span
+                            class=""></span></td>
+                </tr>
+                <tr class="" rowspan="">
+                    <th
+                        class="">
+                        Motor</th>
+                    <td id="tdMotor"class=""><span
+                            class=""></span></td>
+                </tr>
+                <tr class="" rowspan="">
+                    <th
+                        class="">
+                        Tipo de carrocería</th>
+                    <td id="tdCarroceria"class=""><span
+                            class=""></span></td>
+                </tr>
+                <tr class="" rowspan="">
+                    <th
+                        class="">
+                        Kilómetros</th>
+                    <td id="tdKm"class=""><span
+                            class=""></span></td>
+                </tr>
+            </tbody>
+        </table>
 
     </div>
+    <footer class="container">
+
+        <img class="logo" src="images/image1.png" alt="logotipo">
+
+
+        <div class="box-links">
+            <a href="#">Inicio</a>
+            <a href="#">Nosotros</a>
+            <a href="#">Comprar un auto</a>
+            <a href="#">Vender tu auto</a>
+        </div>
+
+        <div class="social">
+            <a href="https://www.facebook.com/rsautosoficial/">
+                <img src="images/faceoriginal.webp" alt="Facebook">
+            </a>
+            <a href="https://instagram.com/rs.autos?igshid=YmMyMTA2M2Y=">
+                <img src="images/igoriginal.webp" alt="Instagram">
+            </a>
+            <a href="https://vehiculos.mercadolibre.com.ar/_CustId_232741283">
+                <img src="images/mercadolibre.jpeg" alt="Mercado Libre">
+            </a>
+        </div>
+
+        <p> AV DE MAYO 722 - VILLA ADELINA (A 10 CUADRAS DEL SHOPPING UNICENTER) <br>
+            LUN A VIER. 09:30 A 13 Y 14:30 A 18:30HS. SABADOS 09:30 A 13HS </p>
+    </footer>
+
     <script src="detail.js"></script>
     <script type="module" src="splide-4.0.1/dist/js/splide.min.js"></script>
+
 </body>
 
 </html>

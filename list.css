@@ -7,10 +7,10 @@ img{
 }
 .divFiltros{
 
-    width:14%;
+    width:25%;
     height:100px;
     float:left;
-    display:table;
+    margin-top: 54px;
 
 }
 .lista-autos{
@@ -25,31 +25,12 @@ img{
 
 .div1{
 
-    width:284px;
-    height:385px;
-    border: 2px solid rgb(0, 0, 0);
-    box-shadow: 1px 1px;
-    border-radius: 2px;
-    
-    display: flex;
-    flex-direction: column;
-    -webkit-flex-grow: 1;
-    flex-grow: 1;
-    
-    border-radius: 6px;
-    -webkit-box-shadow: 0 1px 1px 0 rgb(0 0 0 / 10%), 0 -1px 2px 0 rgb(0 0 0 / 10%);
-    box-shadow: 0 1px 1px 0 rgb(0 0 0 / 10%), 0 -1px 2px 0 rgb(0 0 0 / 10%);
+    width: 284px;
+    height: 372px;
+    box-shadow: 0px 0px 3px 0px black;
+    margin: 5px 5px 5px 5px;
+    box-sizing: border-box;
 
-   /* border:1px solid #ccc;
-   -webkit-border-before: 6px;
-   -webkit-flex-direction: column;
-   display: -webkit-flex;
-
- 
-/*    
-   
-   
-    min-height: 100%; */
 }
 
 .div2{
@@ -95,5 +76,76 @@ img{
 a{
     text-decoration: none;
     color:black;
+    cursor: pointer;
+
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    height:60px;
     
 }
+.inputBuscar{
+    width:100%;
+    height:50px;
+
+}
+.botonBuscar{
+    width:100%;
+    height:30px;
+
+}
+.divAutosUsados{
+
+    width: 100%;
+    height: 50px;
+    display:block;
+}
+.divAutosUsados p{
+
+   font-size: 22px;
+   margin-left: 7px;
+}
+  
+.divMostrarOcultarFiltros{
+    width:50%;
+}
+.divMostrarOcultarFiltros input{
+    margin-right: 136px; 
+    background: transparent;
+    border: none;
+}
+.btFiltro{
+    font-size: 15px;
+    font-family: "Helvetica Neue",Helvetica,Arial;
+}
+.btLimpiar{
+
+    font-size: 15px;
+    font-family: "Helvetica Neue",Helvetica,Arial;
+    color:rgb(138, 138, 138)
+
+}
+select {
+
+    background: transparent;
+    border: none;
+    font-size: 14px;
+    height: 30px;
+    padding: 5px;
+    width: 100%;
+}
+select :focus { 
+
+    outline: none;
+}
+
+.divCentral img {
+
+    width: 100%;
+    height: 100%;
+
+}
+

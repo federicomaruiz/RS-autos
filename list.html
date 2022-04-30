@@ -8,7 +8,7 @@
     <title>RS Autos</title>
     <link rel="stylesheet" href="list.css">
     <link rel="stylesheet" href="style.css">
-   
+
     <!-- <link rel="stylesheet" type="text/css" href="splide-4.0.1/dist/css/themes/splide-default.min.css">
     <link rel="stylesheet" type="text/css" href="splide-4.0.1/dist/css/core.min.css"> -->
 </head>
@@ -28,40 +28,29 @@
                 <a href="index.html">Inicio</a>
                 <a href="we.html">Nosotros</a>
                 <a href="list.html">Compra un auto</a>
-                <a href="/">Vende tu auto</a>
-                <div class="dropdown">
-
-                    <button class="box links dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        Mi cuenta
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                        <button class="dropdown-item" type="button">Registrate</button>
-                        <button class="dropdown-item" type="button">Iniciar sesión</button>
-                    </div>
-                </div>
+                <a href="/">Cotiza tu auto</a>
+                <a href="/">Contacto</a>
             </div>
-
-
-
         </nav>
-
-
     </div>
     <div class="container">
 
-        <div class="divFiltros">
+        <input type="text" autocomplete="off" formcontrolname="search" class="inputBuscar" id="search"
+            placeholder="Buscá por marca, modelo, año, color…" maxlength="100">
 
-            <input type="text" autocomplete="off" formcontrolname="search" class="" id="search"
-                placeholder="Buscá por marca, modelo, año, color…" maxlength="100">
+        <!-- <input id="btBuscar" class="botonBuscar" type="button" value="Buscar"> -->
 
-            <input id="btBuscar" class="" type="button" value="Buscar">
+        <div class="divAutosUsados">
+            <p>Autos usados</p>
+        </div>
+        <div class="divMostrarOcultarFiltros">
+            <input id="mostrarFiltros" type="button" style="display: none" value="Mostrar filtros" class="btFiltro">
+            <input id="ocultarFiltros" type="button" value="Ocultar filtros" class="btFiltro">
+            <input id="limpiar" type="button" value="Limpiar" class="btLimpiar">
+        </div>
+        <div id="divFiltros" class="divFiltros">
 
             <form action="">
-                <p>Autos usados</p>
-                <input id="mostrarFiltros" type="button" value="Mostrar filtros">
-                <input id="ocultarFiltros" type="button" value="Ocultar filtros">
-                <input id="limpiar" type="button" value="limpiar">
                 <div class="form-group">
                     <select id="ano" name="ano" class="select">
                         <option value=""> Año </option>
@@ -70,7 +59,7 @@
                 <div class="form-group">
                     <select id="marca" name="marca" class="select">
                         <option value=""> Marca </option>
-                        
+
                     </select>
                 </div>
                 <div class="form-group">
@@ -105,7 +94,7 @@
                         <option value="500000"> 500000 </option>
                     </select>
                 </div>
-            
+
             </form>
         </div>
         <div id="lista" class="lista-autos">
@@ -113,6 +102,33 @@
 
         </div>
     </div>
+    <footer class="container">
+
+        <img class="logo" src="images/image1.png" alt="logotipo">
+
+
+        <div class="box-links">
+            <a href="#">Inicio</a>
+            <a href="#">Nosotros</a>
+            <a href="#">Comprar un auto</a>
+            <a href="#">Vender tu auto</a>
+        </div>
+
+        <div class="social">
+            <a href="https://www.facebook.com/rsautosoficial/">
+                <img src="images/faceoriginal.webp" alt="Facebook">
+            </a>
+            <a href="https://instagram.com/rs.autos?igshid=YmMyMTA2M2Y=">
+                <img src="images/igoriginal.webp" alt="Instagram">
+            </a>
+            <a href="https://vehiculos.mercadolibre.com.ar/_CustId_232741283">
+                <img src="images/mercadolibre.jpeg" alt="Mercado Libre">
+            </a>
+        </div>
+
+        <p> AV DE MAYO 722 - VILLA ADELINA (A 10 CUADRAS DEL SHOPPING UNICENTER) <br>
+            LUN A VIER. 09:30 A 13 Y 14:30 A 18:30HS. SABADOS 09:30 A 13HS </p>
+    </footer>
     <script src="list.js"></script>
 </body>
 
