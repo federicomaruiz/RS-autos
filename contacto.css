@@ -1,0 +1,21 @@
+.mapa{
+    height:550px;
+    width: 750px;
+    background-image: url(images/mapa.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left:50px;
+    margin-top:60px;
+    border: 1px solid rgb(220, 219, 219);
+    display: inline-block;
+
+
+}
+.divInfoContacto{
+    height:400px;
+    width: 400px;
+    float: right;
+    margin-top:50px;
+    margin-right: 150px;
+    
+}

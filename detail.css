@@ -1,25 +1,131 @@
-.divDataAutos{
-    position: relative;
-    display: block;
-
+body {
+  background-color: rgba(255, 255, 255, 0.908);
 }
-.tableData{
-    width:80%;
-    position:absolute;
-    margin:auto;
-    display: block;
-
+.divDataAutos {
+  position: relative;
+  display: block;
 }
 .splide__slide img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 .splide__slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-table, th, td {
-    border: 1px solid;
+
+.divDetail {
+  width: 700px;
+  position: relative;
+  margin-left: 120px;
 }
-  
+.divDerecha {
+  float: right;
+  position: relative;
+  left: 480px;
+  bottom: 595px;
+  width: 400px;
+  height: 400px;
+  background-color: transparent;
+  /* box-shadow: 0 0 6px black; */
+  border: 1px rgb(201, 201, 201) solid;
+  display: inline;
+}
+
+.divAnoKm {
+  left: 40px;
+  position: relative;
+  margin-top: 10px;
+}
+
+.divAnoKm p {
+  display: inline;
+  padding: 4px 4px 4px 4px;
+  color: rgb(140, 131, 131);
+  font-size: 20px;
+}
+
+.divMarcaModelo {
+  position: relative;
+  margin-top: 40px;
+  margin-left: 30px;
+}
+
+.divMarcaModelo p {
+  display: inline;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 2px 2px 2px 2px;
+  hyphens: auto;
+  line-height: 1.18;
+  padding-bottom: 8px;
+  padding-right: 10px;
+  word-break: break-word;
+}
+
+.divPrecio {
+  margin-left: 90px;
+  position: relative;
+  margin-top: 30px;
+}
+
+.divPrecio p {
+  font-size: 35px;
+}
+
+.bt-reservar {
+  background-color: rgb(1, 93, 171);
+  color: white;
+  text-decoration: none;
+  padding: 17px 21px;
+  display: inline-block;
+  border-radius: 4px;
+  margin: 35px;
+  box-shadow: 0px 0px 3px 0px black;
+}
+
+.bt-reservar:hover {
+  background-color: rgb(0, 115, 213);
+}
+
+.bt-preguntar {
+  background-color: rgb(1, 148, 171);
+  color: white;
+  text-decoration: none;
+  padding: 17px 21px;
+  display: inline-block;
+  border-radius: 4px;
+  margin: 45px;
+  box-shadow: 0px 0px 3px 0px black;
+}
+
+.bt-preguntar:hover {
+  background-color: rgb(71, 184, 202);
+}
+tbody {
+  width: 100%;
+}
+.tableData {
+  width: 80%;
+  margin: auto;
+  margin: 20px 20px;
+  border-radius: 10px;
+  border: 0.1px solid rgb(224, 224, 224);
+}
+tr{
+    width:100%;
+}
+td{
+    text-align:center;
+    width:50%;
+
+}
+th{
+    width:50%
+}
+.divDescripcion {
+    
+    margin-left: 30px;
+
+}

@@ -18,6 +18,16 @@ const tdMotor = document.getElementById("tdMotor");
 const tdCarroceria = document.getElementById("tdCarroceria");
 const tdKm = document.getElementById("tdKm");
 
+const img1 = document.getElementById("1");
+const img2 = document.getElementById("2")
+const img3 = document.getElementById("3")
+const img4 = document.getElementById("4")
+const img5 = document.getElementById("5")
+const img6 = document.getElementById("6")
+
+const divDetail = document.getElementById("divDetail")
+const divDerecha = document.getElementById("divDerecha");
+
 
 async function getCar() {
   try {
@@ -41,9 +51,18 @@ function printData(auto) {
   
   lista.innerHTML = "";
 
-  const pPrecio = document.createElement("p");
+
   // const img = document.createElement("img");
 
+  pAno.textContent = auto.data.attributes.ano;
+  pKm.textContent = auto.data.attributes.kilometros;
+  pMarca.textContent = auto.data.attributes.marca;
+  pModelo.textContent = auto.data.attributes.modelo;
+  pMotor.textContent = auto.data.attributes.motor;
+  pVersion.textContent = auto.data.attributes.version;
+  pPrecio.textContent = auto.data.attributes.precio;
+
+ 
   tdMarca.textContent = auto.data.attributes.marca;
   tdModelo.textContent = auto.data.attributes.modelo;
   tdAno.textContent = auto.data.attributes.ano;
@@ -55,18 +74,24 @@ function printData(auto) {
   tdCarroceria.textContent =auto.data.attributes.carroceria;
   tdKm.textContent = auto.data.attributes.kilometros;
 
+ 
+  img1.src = auto.data.attributes.imagen;
+  img2.src = auto.data.attributes.imagen;
+  img3.src = auto.data.attributes.imagen;
+  img4.src = auto.data.attributes.imagen;
+  img5.src = auto.data.attributes.imagen;
+  img6.src = auto.data.attributes.imagen;
+
+  liCarrucel.appendChild(img1);
+  liCarrucel.appendChild(img2);
+  liCarrucel.appendChild(img3);
+  liCarrucel.appendChild(img4);
+  liCarrucel.appendChild(img5);
+  liCarrucel.appendChild(img6);
 
 
-  
-  pPrecio.textContent = auto.data.attributes.precio;
-  // img.src = auto.data.attributes.imagen;
-  
-
-
-  
-  lista.appendChild(pPrecio);
   // lista.appendChild(img);
-  
+  /* 
   for (const x of auto.data.attributes.imagenes) { 
 
     const imagen = document.createElement("img")
@@ -82,7 +107,7 @@ function printData(auto) {
     ulCarrucel.appendChild(liCarrucel);
     liCarrucel.appendChild(imagen);
 
-  }
+  } */
 
 }
 

@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RS Autos</title>
+    <!-- <link rel="stylesheet" href="carrucelMiniatura.css"> -->
+    <link rel="stylesheet" type="text/css" href="splide-4.0.1/dist/css/themes/splide-default.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="splide-4.0.1/dist/css/core.min.css"> -->
     <link rel="stylesheet" href="detail.css">
     <link rel="stylesheet" href="style.css">
-    <!-- <link rel="stylesheet" href="carrucelMiniatura.css">
-    <link rel="stylesheet" type="text/css" href="splide-4.0.1/dist/css/themes/splide-default.min.css">
-    <link rel="stylesheet" type="text/css" href="splide-4.0.1/dist/css/core.min.css"> -->
     <script>
         new Splide('.splide').mount();
     </script>
@@ -35,102 +35,136 @@
 
             <div class="box-links">
                 <a href="index.html">Inicio</a>
-                <a href="we.html">Nosotros</a>
+                <a href="nosotros.html">Nosotros</a>
                 <a href="list.html">Compra un auto</a>
                 <a href="/">Cotiza tu auto</a>
-                <a href="/">Contacto</a>
+                <a href="contacto.html">Contacto</a>
             </div>
         </nav>
     </div>
 
-    <div class="">
+    <div class="divDetail">
         <section id="thumbnail-carousel" class="splide" aria-label="El carrusel de miniaturas">
-            <div id="divCarrucel" class="splide__track">
-                <ul id="ulCarrucel" class="splide__list">
-                    <li id="liCarrucel" class="splide__slide"> </li>
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">
+                        <img id="1" src="" alt="">
+                    </li>
+                    <li class="splide__slide">
+                        <img id="2" src="" alt="">
+                    </li>
+                    <li class="splide__slide">
+                        <img id="3" src="" alt="">
+                    </li>
+                    <li class="splide__slide">
+                        <img id="4" src="" alt="">
+                    </li>
+                    <li class="splide__slide">
+                        <img id="5" src="" alt="">
+                    </li>
+                    <li class="splide__slide">
+                        <img id="6" src="" alt="">
+                    </li>
                 </ul>
             </div>
         </section>
 
+        <div id="divDerecha" class="divDerecha">
+            <div class="divAnoKm">
+                <p id="pAno"></p>
+                <p id="pKm"></p>
+            </div>
+            <div class="divMarcaModelo">
+                <p id="pMarca"></p>
+                <p id="pModelo"></p>
+                <p id="pMotor"></p>
+                <p id="pVersion"></p>
+            </div>
+            <div class="divPrecio">
+                <p id="pPrecio"></p>
+            </div>
+            <a class="bt-preguntar" href="#">Preguntar</a>
+            <a class="bt-reservar" href="#">Reservar</a>
 
+        </div>
+
+    </div>
+    <div class="container">
 
         <div id="lista" class="divDataAutos">
         </div>
         <h2>Características principales</h2>
-        <table id="tableData" class="andes_table">
-            <tbody id="tBody"class="andes-table__body">
-                <tr id="trMarca"class="andes-table__row" rowspan="">
-                    <th
-                        class="">
+        <table id="tableData" class="tableData">
+            <tbody id="tBody" class="andes-table__body">
+                <tr id="trMarca" class="andes-table__row" rowspan="" style="background-color:#d0d0d0">
+                    <th class="">
                         Marca</th>
-                    <td id="tdMarca" class=""><span
-                            class=""></span></td>
+                    <td id="tdMarca" class="tdData"><span class=""></span></td>
                 </tr>
                 <tr class="" rowspan="">
-                    <th
-                        class="">
+                    <th class="">
                         Modelo</th>
-                    <td id="tdModelo"class=""><span
-                            class=""></span></td>
+                    <td id="tdModelo" class=""><span class=""></span></td>
                 </tr>
-                <tr class="" rowspan="">
-                    <th
-                        class="">
+                <tr class="" rowspan="" style="background-color:#d0d0d0" >
+                    <th class="">
                         Año</th>
-                    <td id="tdAno"class=""><span
-                            class=""></span></td>
+                    <td id="tdAno" class=""><span class=""></span></td>
                 </tr>
                 <tr class="" rowspan="">
-                    <th
-                        class="">
+                    <th class="">
                         Color</th>
-                    <td id="tdColor"class=""><span
-                            class=""></span></td>
+                    <td id="tdColor" class=""><span class=""></span></td>
                 </tr>
-                <tr class="" rowspan="">
-                    <th
-                        class="">
+                <tr class="" rowspan="" style="background-color:#d0d0d0" >
+                    <th class="">
                         Tipo de combustible</th>
-                    <td id="tdCombustible" class=""><span
-                            class=""></span></td>
+                    <td id="tdCombustible" class=""><span class=""></span></td>
                 </tr>
                 <tr class="" rowspan="">
-                    <th
-                        class="">
+                    <th class="">
                         Puertas</th>
-                    <td id="tdPuertas"class=""><span
-                            class=""></span></td>
+                    <td id="tdPuertas" class=""><span class=""></span></td>
                 </tr>
-                <tr class="" rowspan="">
-                    <th
-                        class= "">
+                <tr class="" rowspan="" style="background-color:#d0d0d0">
+                    <th class="">
                         Transmisión</th>
-                    <td id="tdTransmision"class=""><span
-                            class=""></span></td>
+                    <td id="tdTransmision" class=""><span class=""></span></td>
                 </tr>
                 <tr class="" rowspan="">
-                    <th
-                        class="">
+                    <th class="">
                         Motor</th>
-                    <td id="tdMotor"class=""><span
-                            class=""></span></td>
+                    <td id="tdMotor" class=""><span class=""></span></td>
                 </tr>
-                <tr class="" rowspan="">
-                    <th
-                        class="">
+                <tr class="" rowspan="" style="background-color:#d0d0d0">
+                    <th class="">
                         Tipo de carrocería</th>
-                    <td id="tdCarroceria"class=""><span
-                            class=""></span></td>
+                    <td id="tdCarroceria" class=""><span class=""></span></td>
                 </tr>
                 <tr class="" rowspan="">
-                    <th
-                        class="">
+                    <th class="">
                         Kilómetros</th>
-                    <td id="tdKm"class=""><span
-                            class=""></span></td>
+                    <td id="tdKm" class=""><span class=""></span></td>
                 </tr>
             </tbody>
         </table>
+        <div class="divDescripcion">
+            <p> Descripción : <br><br>
+
+                RS AUTOS - SAN ISIDRO <br> <br>
+                
+                EXCELENTE ESTADO <br> <br>
+                
+                Documentación al día, lista para transferir. <br> <br>
+                
+                Tomamos tu usado. <br> <br>
+                
+                CONSULTANOS POR LA FINANCIACIÓN!* <br> <br>
+                
+                EN 12, 18, 24, 36 Y HASTA 48 CUOTAS FIJAS MENSUALES EN PESOS PRESENTANDO DNI. <br> <br>
+                
+                *Se podrá otorgar el crédito prendario por hasta un 40-50% del valor publicado del vehículo.</p>
+        </div>
 
     </div>
     <footer class="container">
@@ -154,6 +188,9 @@
             </a>
             <a href="https://vehiculos.mercadolibre.com.ar/_CustId_232741283">
                 <img src="images/mercadolibre.jpeg" alt="Mercado Libre">
+            </a>
+            <a href="https://www.google.com/maps/place/RS+AUTOS/@-34.5149564,-58.5440725,17z/data=!4m5!3m4!1s0x95bcb09013969155:0x572e741b21702c81!8m2!3d-34.5149477!4d-58.5419308">
+                <img src="images/lr.webp" alt="Ubicacion">
             </a>
         </div>
 

@@ -1,0 +1,83 @@
+.about-box {
+  margin-top: 50px;
+  position: relative;
+  float: right;
+  width: 540px;
+  height: 700px;
+  background-size: cover;
+}
+.about-img {
+  width: 540px;
+  height: 700px;
+  border-radius: 4px;
+  border: 1px solid #f6f6f66e;
+}
+
+.about-h1 {
+  margin: 60px;
+  margin-left: 29px;
+  padding-top: 48px;
+  text-align: left;
+  color: #0b0b0c;
+  font-size: 36px;
+  font-family: serif;
+}
+.img-box-redonda {
+  position: relative;
+  background-size: cover;
+  margin-left: 29px;
+}
+.img-redonda {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  float: left;
+}
+aside {
+  padding-left: 89px;
+}
+aside p {
+  margin: 3px;
+  padding: 1px;
+}
+aside .nombre {
+  color: #1f3b93;
+  font-size: 16px;
+  font-weight: bold;
+}
+aside .fecha {
+  color: #d8d8d8;
+  font-size: 14px;
+  font-weight: 500;
+}
+.about {
+  margin-left: 12px;
+  padding: 15px;
+}
+
+.about a img {
+  height: 13px;
+  width: 13px;
+  display: block;
+}
+.informacion-general {
+  display: inline-block;
+  text-align: start;
+  margin: 50px 250px 0px 250px;
+}
+.about-h2 {
+  margin-top: 60px;
+  color: #1b1b83;
+  font-size: 34px;
+  margin-left: 29px;
+}
+.informacion-general .about-p p {
+  text-align: center;
+  color: #b9b7b7;
+  margin: 4px;
+}
+.about-p {
+  color: #9d9b9b;
+  font-size: 15px;
+  margin-left: 29px;
+}
