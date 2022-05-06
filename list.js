@@ -118,7 +118,7 @@ selectAno.addEventListener("change", () => {
 });
 
 selectMarca.addEventListener("change", () => {
-  
+
   selectKm.value = "";
   selectAno.value="";
   
@@ -408,3 +408,9 @@ function resetearVersion() {
     }
   }
 }
+
+/* autosOrdenados = autos.sort();
+
+console.log(autosOrdenados);
+
+printData(autosOrdenados); */
