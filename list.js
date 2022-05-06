@@ -15,6 +15,10 @@ const btBuscar = document.getElementById("btBuscar");
 
 const divFiltros = document.getElementById("divFiltros");
 
+let anoSeleccionado;
+let marcaSeleccionada;
+let modeloSeleccionado;
+
 var autosFiltrados;
 let autos;
 let marca;
@@ -82,60 +86,104 @@ btClear.addEventListener("click", limpiar);
 function limpiar() {
   selectAno.value = "";
   selectMarca.value = "";
-  selectModelo.value = "";
   selectVersion.value = "";
   selectKm.value = "";
   busqueda.value = "";
 
+  // revisar solo borra 1 elemento del Option
+  resetearModelo();
+  resetearVersion();
+
+  selectModelo.disabled = true;
+  selectVersion.disabled = true;
+
   search(false);
 }
 
+selectAno.addEventListener("change", () => {
+
+  selectMarca.value = "";
+  selectKm.value="";
+
+  selectModelo.disabled = true;
+  selectVersion.disabled = true;
+
+  resetearModelo();
+  resetearVersion();
+
+  ano = selectAno.value;
+  autosFiltrados = autos.data.filter((auto) => auto.attributes.ano == ano);
+  printData(autosFiltrados);
+
+});
+
 selectMarca.addEventListener("change", () => {
+  
+  selectKm.value = "";
+  selectAno.value="";
+  
+  resetearModelo();
+  resetearVersion();
 
   marca = selectMarca.value;
   autosFiltrados = autos.data.filter((auto) => auto.attributes.marca == marca);
   printData(autosFiltrados);
 
-  mostrarModelo();
-});
+  marcaSeleccionada = marca;
 
-selectAno.addEventListener("change", () => {
-
-  ano = selectAno.value;
-  autosFiltrados = autos.data.filter((auto) => auto.attributes.ano == ano);
-  printData(autosFiltrados);
   mostrarModelo();
+  rellenarModelo();
 });
 
 selectModelo.addEventListener("change", () => {
+  resetearVersion();
 
   modelo = selectModelo.value;
-  autosFiltrados = autos.data.filter((auto) => auto.attributes.modelo == modelo);
+  autosFiltrados = autos.data.filter(
+    (auto) => auto.attributes.modelo == modelo
+  );
   printData(autosFiltrados);
+
+  modeloSeleccionado = modelo;
+
   mostrarVersion();
+  rellenarVersion();
 });
 
+selectVersion.addEventListener("change", () => {
+  version = selectVersion.value;
+  autosFiltrados = autos.data.filter(
+    (auto) => auto.attributes.version == version
+  );
+  printData(autosFiltrados);
+});
 
-// ver por que esta filtrando por que NO FUNCIONA
+selectKm.addEventListener("change", () => {
+  selectMarca.value = "";
+  selectAno.value="";
 
-/* selectKm.addEventListener("change", () => {
+  selectModelo.disabled = true;
+  selectVersion.disabled = true;
 
-  km = selectKm.value;
-  autosFiltrados = autos.data.filter((auto) => auto.attributes.kilometros < km);
+  resetearModelo();
+  resetearVersion();
+
+  km = parseInt(selectKm.value.replace(" km", ""));
+  autosFiltrados = autos.data.filter(
+    (auto) => parseInt(auto.attributes.kilometros.replace(" km", "")) <= km
+  );
   console.log(autosFiltrados);
   printData(autosFiltrados);
-
-
-}) */
+});
 
 function mostrarModelo() {
-  if (marca && ano) {
+  if (marca) {
     selectModelo.disabled = false;
   }
 }
 
 function mostrarVersion() {
-  if (marca && ano && modelo) {
+  if (marca && modelo) {
     selectVersion.disabled = false;
   }
 }
@@ -145,6 +193,8 @@ async function search(rellenar) {
     let response = await fetch(api + "/api/autos");
     autos = await response.json();
 
+    autosFiltrados = autos.data;
+
     if (!response.ok) {
       const message = `Error: ${response.status}`;
       throw new Error(message);
@@ -153,13 +203,11 @@ async function search(rellenar) {
     printData(autos.data);
     console.log(autos);
 
-    if(rellenar){
-
-    rellenarMarca();
-    rellenarAno();
-    rellenarModelo();
-    rellenarVersion();
-
+    if (rellenar) {
+      rellenarMarca();
+      rellenarAno();
+      rellenarModelo();
+      rellenarVersion();
     }
   } catch (error) {
     console.log(error);
@@ -167,8 +215,6 @@ async function search(rellenar) {
 }
 
 function printData(autos) {
- 
-
   const lista = document.getElementById("lista");
   lista.innerHTML = "";
 
@@ -278,78 +324,87 @@ search(true);
 function rellenarMarca() {
   let allMarcas = [];
   for (const auto of autos.data) {
-    allMarcas.push(auto.attributes.marca)
+    allMarcas.push(auto.attributes.marca);
   }
   let uniqueMarcas = remove_duplicates(allMarcas);
-  uniqueMarcas.forEach(marca => {
-
+  uniqueMarcas.forEach((marca) => {
     var opt = document.createElement("option");
     opt.value = marca;
     opt.innerHTML = marca;
     selectMarca.appendChild(opt);
-
-  })
-
+  });
 }
 
 function rellenarAno() {
-  let allYears =[];
+  let allYears = [];
   for (const auto of autos.data) {
-    allYears.push(auto.attributes.ano)
+    allYears.push(auto.attributes.ano);
   }
   let uniqueYears = remove_duplicates(allYears);
-  uniqueYears.forEach(year=> {
-
+  uniqueYears.forEach((year) => {
     var opt = document.createElement("option");
     opt.value = year;
     opt.innerHTML = year;
     selectAno.appendChild(opt);
-
-  })
-
+  });
 }
 
 function rellenarModelo() {
   let allModelo = [];
   for (const auto of autos.data) {
-    allModelo.push(auto.attributes.modelo)
+    if (auto.attributes.marca == marcaSeleccionada) {
+      allModelo.push(auto.attributes.modelo);
+    }
   }
-  let uniqueModelo = remove_duplicates(allModelo);
-  uniqueModelo.forEach(modelo => {
 
+  let uniqueModelo = remove_duplicates(allModelo);
+  uniqueModelo.forEach((modelo) => {
     var opt = document.createElement("option");
-    opt.value = modelo ;
+    opt.value = modelo;
     opt.innerHTML = modelo;
     selectModelo.appendChild(opt);
-
-  })
+  });
 }
 
 function rellenarVersion() {
   let allVersion = [];
   for (const auto of autos.data) {
-    allVersion.push(auto.attributes.version);
+    if (auto.attributes.modelo == modeloSeleccionado) {
+      allVersion.push(auto.attributes.version);
+    }
   }
   let uniqueVersion = remove_duplicates(allVersion);
-  uniqueVersion.forEach(version => {
-
+  uniqueVersion.forEach((version) => {
     var opt = document.createElement("option");
     opt.value = version;
     opt.innerHTML = version;
     selectVersion.appendChild(opt);
-  })
+  });
 }
 
 function remove_duplicates(arr) {
   var obj = {};
   var ret_arr = [];
   for (var i = 0; i < arr.length; i++) {
-      obj[arr[i]] = true;
+    obj[arr[i]] = true;
   }
   for (var key in obj) {
-      ret_arr.push(key);
+    ret_arr.push(key);
   }
   return ret_arr;
 }
 
-busqueda.addEventListener()
+function resetearModelo() {
+  for (var i = 1; i < selectModelo.length; i) {
+    if (selectModelo.options[i].value !== "Modelo") {
+      selectModelo.remove(i);
+    }
+  }
+}
+function resetearVersion() {
+  for (var i = 1; i < selectVersion.length; i) {
+    if (selectVersion.options[i].value !== "Version") {
+      selectVersion.remove(i);
+    }
+  }
+}
