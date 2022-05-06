@@ -12,7 +12,7 @@
 
 .about-h1 {
   margin: 60px;
-  margin-left: 29px;
+  margin-left: 120px;
   padding-top: 48px;
   text-align: left;
   color: #0b0b0c;
@@ -22,7 +22,7 @@
 .img-box-redonda {
   position: relative;
   background-size: cover;
-  margin-left: 29px;
+  margin-left: 120px;
 }
 .img-redonda {
   border-radius: 50%;
@@ -31,7 +31,7 @@
   float: left;
 }
 aside {
-  padding-left: 89px;
+  padding-left: 175px;
 }
 aside p {
   margin: 3px;
@@ -77,5 +77,6 @@ aside .fecha {
   color: #9d9b9b;
   font-size: 15px;
   margin-left: 29px;
-  width:50%;
+  width:40%;
+  margin-left:120px;
 }

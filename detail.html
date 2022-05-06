@@ -6,18 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RS Autos</title>
-    <!-- <link rel="stylesheet" href="carrucelMiniatura.css"> -->
-    <link rel="stylesheet" type="text/css" href="splide-4.0.1/dist/css/themes/splide-default.min.css">
-    <!-- <link rel="stylesheet" type="text/css" href="splide-4.0.1/dist/css/core.min.css"> -->
+    <link rel="stylesheet" type="text/html" href="splide-4.0.1/dist/css/themes/splide-default.min.css">
+    <link rel="stylesheet" type="text/html" href="splide-4.0.1/dist/css/core.min.css">
+    <link rel="stylesheet" href="splide.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.1/dist/js/splide.min.js"></script>
     <link rel="stylesheet" href="detail.css">
     <link rel="stylesheet" href="style.css">
     <script>
-        new Splide('.splide').mount();
-    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var splide = new Splide('.splide');
-            splide.mount();
+        document.addEventListener("DOMContentLoaded", function () {
+    
         });
     </script>
 </head>
@@ -44,30 +41,25 @@
     </div>
 
     <div class="divDetail">
-        <section id="thumbnail-carousel" class="splide" aria-label="El carrusel de miniaturas">
+
+        <section id="image-carousel" class="splide" aria-label="Beautiful Images">
             <div class="splide__track">
-                <ul class="splide__list">
-                    <li class="splide__slide">
-                        <img id="1" src="" alt="">
-                    </li>
-                    <li class="splide__slide">
-                        <img id="2" src="" alt="">
-                    </li>
-                    <li class="splide__slide">
-                        <img id="3" src="" alt="">
-                    </li>
-                    <li class="splide__slide">
-                        <img id="4" src="" alt="">
-                    </li>
-                    <li class="splide__slide">
-                        <img id="5" src="" alt="">
-                    </li>
-                    <li class="splide__slide">
-                        <img id="6" src="" alt="">
-                    </li>
+                <ul id="mainImages" class="splide__list">
+                   
                 </ul>
             </div>
         </section>
+
+        <section id="thumbnail-carousel" class="splide"
+            aria-label="The carousel with thumbnails. Selecting a thumbnail will change the Beautiful Gallery carousel.">
+            <div class="splide__track">
+                <ul id="main2Images" class="splide__list">
+                  
+                </ul>
+            </div>
+        </section>
+
+
 
         <div id="divDerecha" class="divDerecha">
             <div class="divAnoKm">
@@ -83,7 +75,7 @@
             <div class="divPrecio">
                 <p id="pPrecio"></p>
             </div>
-            <a class="bt-preguntar" href="#">Preguntar</a>
+            <a id="btPreguntar" class="bt-preguntar" href="#">Preguntar</a>
             <a class="bt-reservar" href="#">Reservar</a>
 
         </div>
@@ -96,7 +88,7 @@
         <h2>Características principales</h2>
         <table id="tableData" class="tableData">
             <tbody id="tBody" class="andes-table__body">
-                <tr id="trMarca" class="andes-table__row" rowspan="" >
+                <tr id="trMarca" class="andes-table__row" rowspan="">
                     <th style="background-color:#ebebeb" class="">
                         Marca</th>
                     <td id="tdMarca" style="background-color:#f2f2f2" class="tdData"><span class=""></span></td>
@@ -106,7 +98,7 @@
                         Modelo</th>
                     <td id="tdModelo" class=""><span class=""></span></td>
                 </tr>
-                <tr class="" rowspan="" style="background-color:#d0d0d0" >
+                <tr class="" rowspan="" style="background-color:#d0d0d0">
                     <th style="background-color:#ebebeb" class="">
                         Año</th>
                     <td id="tdAno" style="background-color:#f2f2f2" class=""><span class=""></span></td>
@@ -116,7 +108,7 @@
                         Color</th>
                     <td id="tdColor" class=""><span class=""></span></td>
                 </tr>
-                <tr class="" rowspan="" style="background-color:#d0d0d0" >
+                <tr class="" rowspan="" style="background-color:#d0d0d0">
                     <th style="background-color:#ebebeb" class="">
                         Tipo de combustible</th>
                     <td id="tdCombustible" style="background-color:#f2f2f2" class=""><span class=""></span></td>
@@ -127,7 +119,7 @@
                     <td id="tdPuertas" class=""><span class=""></span></td>
                 </tr>
                 <tr class="" rowspan="" style="background-color:#d0d0d0">
-                    <th  style="background-color:#ebebeb" class="">
+                    <th style="background-color:#ebebeb" class="">
                         Transmisión</th>
                     <td id="tdTransmision" style="background-color:#f2f2f2" class=""><span class=""></span></td>
                 </tr>
@@ -148,25 +140,59 @@
                 </tr>
             </tbody>
         </table>
+        <div id="divOculto" style="display:none" class="divOculto">
+            <div class="btCerrar" id="btCerrar">
+                <img src="images/cerrar.webp" alt="">
+            </div>
+
+            <form class="form_registro" name="form_registro" id="form_registro">
+                <div class="divNombre">
+                    <label for="nombre" class="label">Nombre</label>
+                    <input name="nombre" type="text" id="nombre" class="required" title="Por favor, rellena el nombre">
+                </div>
+                <div class="divApellido">
+                    <label for="nombre" class="label">Apellido</label>
+                    <input name="nombre" type="text" id="nombre" class="required" title="Por favor, rellena el nombre">
+                </div>
+                <div class="divEmail">
+                    <label for="email" class="label">E-mail</label>
+                    <input name="e_mail" type="text" id="e_mail">
+                </div>
+                <div class="divTelefono">
+                    <label for="telefono" class="label">Telefono</label>
+                    <input name="telefono" type="text" id="telefono">
+                </div>
+                <div class="divComentarios">
+                    <label for="comentarios" class="label"></label>
+                    <textarea name="comentarios" cols="60" rows="10" id="comentarios"
+                        placeholder="Escribe tu pregunta.."></textarea>
+                </div>
+
+                <td colspan="2" align="center"><input type="submit" value="Enviar" id="comprobar"></td>
+            </form>
+        </div>
+
+
+
         <div class="divDescripcion">
             <p> Descripción : <br><br>
 
                 RS AUTOS - SAN ISIDRO <br> <br>
-                
+
                 EXCELENTE ESTADO <br> <br>
-                
+
                 Documentación al día, lista para transferir. <br> <br>
-                
+
                 Tomamos tu usado. <br> <br>
-                
+
                 CONSULTANOS POR LA FINANCIACIÓN!* <br> <br>
-                
+
                 EN 12, 18, 24, 36 Y HASTA 48 CUOTAS FIJAS MENSUALES EN PESOS PRESENTANDO DNI. <br> <br>
-                
+
                 *Se podrá otorgar el crédito prendario por hasta un 40-50% del valor publicado del vehículo.</p>
         </div>
-
     </div>
+
     <footer class="container">
 
         <img class="logo" src="images/image1.png" alt="logotipo">
@@ -189,7 +215,8 @@
             <a href="https://vehiculos.mercadolibre.com.ar/_CustId_232741283">
                 <img src="images/mercadolibre.jpeg" alt="Mercado Libre">
             </a>
-            <a href="https://www.google.com/maps/place/RS+AUTOS/@-34.5149564,-58.5440725,17z/data=!4m5!3m4!1s0x95bcb09013969155:0x572e741b21702c81!8m2!3d-34.5149477!4d-58.5419308">
+            <a
+                href="https://www.google.com/maps/place/RS+AUTOS/@-34.5149564,-58.5440725,17z/data=!4m5!3m4!1s0x95bcb09013969155:0x572e741b21702c81!8m2!3d-34.5149477!4d-58.5419308">
                 <img src="images/lr.webp" alt="Ubicacion">
             </a>
         </div>
@@ -199,7 +226,6 @@
     </footer>
 
     <script src="detail.js"></script>
-    <script type="module" src="splide-4.0.1/dist/js/splide.min.js"></script>
 
 </body>
 

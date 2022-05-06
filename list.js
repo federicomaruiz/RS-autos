@@ -1,3 +1,4 @@
+const api = "https://rs-autos.herokuapp.com";
 const form = document.getElementById("form");
 const busqueda = document.getElementById("search");
 
@@ -19,6 +20,7 @@ let autos;
 let marca;
 let ano;
 let modelo;
+let km;
 
 /* filtro de marca por peticion 
 async function searchList() {
@@ -27,6 +29,7 @@ async function searchList() {
 
     const response = await fetch(
       `http://localhost:1337/api/autos?filters[marca][$containsi]=${search.value}`
+      https://rs-autos.herokuapp.com/api/autos....
     );
     const busquedaAuto = await response.json();
 
@@ -84,48 +87,46 @@ function limpiar() {
   selectKm.value = "";
   busqueda.value = "";
 
-  search();
+  search(false);
 }
 
 selectMarca.addEventListener("change", () => {
+
   marca = selectMarca.value;
-
-  // numbers.filter(number => number > 10 )
-  // mirar mayusculas minusculas de value == para que coincidan marca modelo etc
-  // usar if else para concatenar mas de un filtro al mismo tiempo
-
   autosFiltrados = autos.data.filter((auto) => auto.attributes.marca == marca);
-
-  console.log(autosFiltrados);
-
-  // printData(autosFiltrados);
+  printData(autosFiltrados);
 
   mostrarModelo();
-  
 });
 
 selectAno.addEventListener("change", () => {
+
   ano = selectAno.value;
-
-  // seguir aca mirar como mostrar despues del filtro //
   autosFiltrados = autos.data.filter((auto) => auto.attributes.ano == ano);
-
-  lista.value = autosFiltrados;
-
+  printData(autosFiltrados);
   mostrarModelo();
 });
 
 selectModelo.addEventListener("change", () => {
+
   modelo = selectModelo.value;
-
-  autosFiltrados = autos.data.filter(
-    (auto) => auto.attributes.modelo == modelo
-  );
-
-  console.log(autosFiltrados);
-
+  autosFiltrados = autos.data.filter((auto) => auto.attributes.modelo == modelo);
+  printData(autosFiltrados);
   mostrarVersion();
 });
+
+
+// ver por que esta filtrando por que NO FUNCIONA
+
+/* selectKm.addEventListener("change", () => {
+
+  km = selectKm.value;
+  autosFiltrados = autos.data.filter((auto) => auto.attributes.kilometros < km);
+  console.log(autosFiltrados);
+  printData(autosFiltrados);
+
+
+}) */
 
 function mostrarModelo() {
   if (marca && ano) {
@@ -139,38 +140,34 @@ function mostrarVersion() {
   }
 }
 
-async function search() {
+async function search(rellenar) {
   try {
-    let response = await fetch(`http://localhost:1337/api/autos`);
+    let response = await fetch(api + "/api/autos");
     autos = await response.json();
 
     if (!response.ok) {
       const message = `Error: ${response.status}`;
       throw new Error(message);
     }
-    console.log(autosFiltrados);
-    /*
-          IDEA
-   
-    if (autosFiltrados != null ){
 
-      printData(autosFiltrados)
-    }
-   */
-
-    printData(autos);
+    printData(autos.data);
     console.log(autos);
+
+    if(rellenar){
+
+    rellenarMarca();
+    rellenarAno();
+    rellenarModelo();
+    rellenarVersion();
+
+    }
   } catch (error) {
     console.log(error);
   }
 }
 
 function printData(autos) {
-
-  rellenarMarca();
-  rellenarAno();
-  rellenarModelo();
-  rellenarVersion();
+ 
 
   const lista = document.getElementById("lista");
   lista.innerHTML = "";
@@ -178,9 +175,7 @@ function printData(autos) {
   // haciendo un if (autosFiltrados == "") mostrar todos los autos sino mostrar autosFiltrados ( quiero mostrar solo los filtrados)
   // y que los filtros vayan haciendo efectos unos sobre otros año y marca, sobre modelo version
 
-
-
-  for (const auto of autos.data) {
+  for (const auto of autos) {
     // falta agregar version tambien en BBDD
 
     const div1 = document.createElement("div");
@@ -211,8 +206,6 @@ function printData(autos) {
 
     a.href = `detail.html?id=${auto.id}`;
 
-    
-
     lista.appendChild(div1);
     lista.appendChild(div2);
     lista.appendChild(div3);
@@ -236,9 +229,7 @@ function printData(autos) {
     lista.appendChild(pMotor);
     lista.appendChild(pVersion);
     lista.appendChild(img);
-    
 
-  
     div1.appendChild(pMarca);
     div1.appendChild(pModelo);
     div1.appendChild(pAno);
@@ -249,9 +240,6 @@ function printData(autos) {
     div1.appendChild(img);
     div1.appendChild(a);
 
-   
-   
-
     div1.appendChild(div2);
     div1.appendChild(div3);
     div1.appendChild(div4);
@@ -260,7 +248,7 @@ function printData(autos) {
 
     a.appendChild(div2);
     div2.appendChild(img);
-    
+
     a.appendChild(div3);
     div3.appendChild(pMarca);
     div3.appendChild(pModelo);
@@ -269,7 +257,6 @@ function printData(autos) {
     div3.appendChild(pPrecio);
     div3.appendChild(pMotor);
     div3.appendChild(pVersion);
-    
 
     div3.appendChild(div4);
     div3.appendChild(div5);
@@ -284,47 +271,85 @@ function printData(autos) {
     div6.appendChild(pModelo);
     div6.appendChild(pMotor);
     div6.appendChild(pVersion);
-    // div6.appendChild(pVersion);
-
-   
-
-   
   }
 }
-search();
+search(true);
 
 function rellenarMarca() {
+  let allMarcas = [];
   for (const auto of autos.data) {
-    var opt = document.createElement("option");
-    opt.value = auto.attributes.marca;
-    opt.innerHTML = auto.attributes.marca;
-    selectMarca.appendChild(opt);
+    allMarcas.push(auto.attributes.marca)
   }
+  let uniqueMarcas = remove_duplicates(allMarcas);
+  uniqueMarcas.forEach(marca => {
+
+    var opt = document.createElement("option");
+    opt.value = marca;
+    opt.innerHTML = marca;
+    selectMarca.appendChild(opt);
+
+  })
+
 }
 
 function rellenarAno() {
+  let allYears =[];
   for (const auto of autos.data) {
-    var opt = document.createElement("option");
-    opt.value = auto.attributes.ano;
-    opt.innerHTML = auto.attributes.ano;
-    selectAno.appendChild(opt);
+    allYears.push(auto.attributes.ano)
   }
+  let uniqueYears = remove_duplicates(allYears);
+  uniqueYears.forEach(year=> {
+
+    var opt = document.createElement("option");
+    opt.value = year;
+    opt.innerHTML = year;
+    selectAno.appendChild(opt);
+
+  })
+
 }
 
 function rellenarModelo() {
+  let allModelo = [];
   for (const auto of autos.data) {
-    var opt = document.createElement("option");
-    opt.value = auto.attributes.modelo;
-    opt.innerHTML = auto.attributes.modelo;
-    selectModelo.appendChild(opt);
+    allModelo.push(auto.attributes.modelo)
   }
+  let uniqueModelo = remove_duplicates(allModelo);
+  uniqueModelo.forEach(modelo => {
+
+    var opt = document.createElement("option");
+    opt.value = modelo ;
+    opt.innerHTML = modelo;
+    selectModelo.appendChild(opt);
+
+  })
 }
 
 function rellenarVersion() {
+  let allVersion = [];
   for (const auto of autos.data) {
-    var opt = document.createElement("option");
-    opt.value = auto.attributes.version;
-    opt.innerHTML = auto.attributes.version;
-    selectVersion.appendChild(opt);
+    allVersion.push(auto.attributes.version);
   }
+  let uniqueVersion = remove_duplicates(allVersion);
+  uniqueVersion.forEach(version => {
+
+    var opt = document.createElement("option");
+    opt.value = version;
+    opt.innerHTML = version;
+    selectVersion.appendChild(opt);
+  })
 }
+
+function remove_duplicates(arr) {
+  var obj = {};
+  var ret_arr = [];
+  for (var i = 0; i < arr.length; i++) {
+      obj[arr[i]] = true;
+  }
+  for (var key in obj) {
+      ret_arr.push(key);
+  }
+  return ret_arr;
+}
+
+busqueda.addEventListener()
