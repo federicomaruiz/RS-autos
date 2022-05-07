@@ -127,12 +127,14 @@ thumbnails.mount();
 
 btPreguntar.addEventListener("click", () => {
   divOculto.style.display = "block";
+  thumbnailcarousel.style.display = "none";
 
 
 });
 
 btCerrar.addEventListener("click", () => {
   divOculto.style.display = "none";
+  thumbnailcarousel.style.display = "block";
 
  
 });

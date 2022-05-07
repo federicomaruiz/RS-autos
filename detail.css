@@ -180,7 +180,7 @@ h2 {
   margin: auto;
   width: 800px;
   height: 600px;
-  background:rgb(237 237 237);
+  background: antiquewhite;
   top: 160px;
   left: 300px;
   box-shadow: black;
@@ -360,3 +360,15 @@ h2 {
    display: none;
   }
 }
+
+input#comprobar {
+  background-color: rgb(140, 131, 131);
+  border: 2px solid #555555;
+}
+
+input#comprobar:hover {
+
+  background-color:  rgb(169 159 159);
+
+}
+

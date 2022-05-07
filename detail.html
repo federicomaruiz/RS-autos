@@ -140,18 +140,18 @@
                 <img src="images/cerrar.webp" alt="">
             </div>
 
-            <form class="form_registro" name="form_registro" id="form_registro">
+            <form action="https://formsubmit.co/3a15bebfb37a3692315956ec087284b9" method="POST" class ="form_registro">
                 <div class="divNombre">
-                    <label for="nombre" class="label">Nombre</label>
-                    <input name="nombre" type="text" id="nombre" class="required" title="Por favor, rellena el nombre">
+                    <label for="name" class="label">Nombre</label>
+                    <input name="name" type="text" id="nombre" class="required" title="Por favor, rellena el nombre">
                 </div>
                 <div class="divApellido">
-                    <label for="nombre" class="label">Apellido</label>
-                    <input name="nombre" type="text" id="nombre" class="required" title="Por favor, rellena el nombre">
+                    <label for="apellido" class="label">Apellido</label>
+                    <input name="apellido" type="text" id="nombre" class="required" title="Por favor, rellena el nombre">
                 </div>
                 <div class="divEmail">
                     <label for="email" class="label">E-mail</label>
-                    <input name="e_mail" type="text" id="e_mail">
+                    <input name="email" type="email" id="email">
                 </div>
                 <div class="divTelefono">
                     <label for="telefono" class="label">Telefono</label>
@@ -164,6 +164,9 @@
                 </div>
 
                 <td colspan="2" align="center"><input type="submit" value="Enviar" id="comprobar"></td>
+
+                <input type="hidden" name="_next" value="https://jazzy-medovik-006b1a.netlify.app/list.html">
+                <input type="hidden" name="_captcha" value="false">
             </form>
         </div>
 
