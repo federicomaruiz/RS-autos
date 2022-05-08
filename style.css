@@ -83,6 +83,7 @@ header h1 {
   font-size: 50px;
   color: #001c73;
   font-family: ui-monospace;
+  margin-top: 30px;
 }
 
 header p {
@@ -108,7 +109,7 @@ header p {
 }
 
 .bg-head {
-  background-color: #fbfcff;
+  background-color: rgb(248 249 250);
   padding-bottom: 60px;
 }
 
@@ -223,7 +224,7 @@ footer p {
   bottom: 674px;
 }
 .nav-item{
-  margin: 0px 65px ;
+  margin: 0px 55px ;
   color:black;
 }
 .logoNav{
@@ -236,7 +237,7 @@ footer p {
     width:1200px;
   }
   .nav-item{
-    margin: 0px 35px ;
+    margin: 0px 25px ;
   }
   
 
@@ -244,7 +245,7 @@ footer p {
 @media (max-width:1060px){
 
   .nav-item{
-    margin: 0px 32px ;
+    margin: 0px 22px ;
   }
 
 }
@@ -255,7 +256,7 @@ footer p {
     width:1024px;
   }
   .nav-item{
-    margin: 0px 30px ;
+    margin: 0px 24px ;
   }
 
 }
@@ -275,7 +276,7 @@ footer p {
     font-size: 14px;
     color: rgb(144, 144, 167);
     margin-bottom: 46px;
- }
+  }
  .btn-primary {
   background-color: rgb(1, 93, 171);
   color: white;
