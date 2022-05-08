@@ -514,6 +514,118 @@ input#comprobar:hover {
 
 
 }
+@media (max-width: 450px) {
+  .divDetail {
+    position: relative;
+    margin-left: 10px;
+    margin-top: 50px;
+    width: 917px;
+  }
+
+  #mainImages img {
+    object-fit: contain;
+    min-width: 371px;
+    min-height: 346px;
+  }
+
+  .splide__slide img {
+    width: 100%;
+    height: 100%;
+    max-width: 371px;
+    max-height: 446px;
+  }
+  .splide.is-initialized, .splide.is-rendered {
+    visibility: visible;
+    width: 38%;
+  }
+  h2 {
+    margin-top: 14px;
+  }
+  .divAnoKm p {
+    display: inline;
+    padding: 4px 4px 4px 4px;
+    color: rgb(140, 131, 131);
+    font-size: 12px;
+  }
+  .divMarcaModelo {
+    position: relative;
+    margin-top: 16px;
+    margin-left: -5px;
+  }
+  .divMarcaModelo p {
+    font-size: 15px;
+  }
+  .divAnoKm {
+    margin-top: 36px;
+    margin-left: 40px;
+  }
+  .divPrecio p {
+    font-size: 19px;
+  }
+  .bt-preguntar {
+    background-color: #569aff;
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    display: inline-block;
+    border-radius: 4px;
+    margin: 19px;
+    margin-left: 93px;
+    box-shadow: 0px 0px 3px 0px black;
+    font-size: 12px;
+  }
+  h2 {
+    margin-top: 14px;
+    font-size: 15px;
+  }
+  th {
+    font-size: 10px;
+  }
+  td {
+    text-align: center;
+    width: 50%;
+    font-size: 10px;
+    padding: 10px;
+  }
+  
+  .divDescripcion {
+    margin-left: 30px;
+    font-size: 10px;
+  }
+  .divOculto {
+    position: absolute;
+    margin: auto;
+    width: 300px;
+    height: 580px;
+    background: antiquewhite;
+    top: 165px;
+    left: 8px;
+    box-shadow: black;
+    box-shadow: 0px 0px 0px 20000px rgb(36 29 86 / 88%);
+  }
+  .form_registro input {
+    width: 226px;
+    height: 22px;
+    margin-left: 20px;
+  }
+  label {
+    margin-left: 20px;
+    font-size: 13px;
+  }
+  input#comprobar{
+    background-color: rgb(140, 131, 131);
+    border: 2px solid #555555;
+    height: 28px;
+  }
+  textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    font-size: 16px;
+  }
+
+}
 @media (max-width: 320px) {
   .divDetail {
     position: relative;
@@ -526,6 +638,7 @@ input#comprobar:hover {
     min-width: 311px;
     min-height: 290px;
   }
+
   .splide__slide img {
     width: 100%;
     height: 100%;

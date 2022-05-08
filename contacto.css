@@ -102,6 +102,37 @@
   }
 
 }
+@media (max-width: 450px) {
+
+  .mapa {
+    width: 390px;
+    height: 310px;
+    margin-left:5px;
+    margin-right: 5px;
+    margin-top:22px;
+  }
+  .pTitulo {
+    font-size: 12px;
+    margin-top: -22px;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 10px;
+  }
+  .espaciado{
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .divInfoContacto {
+
+    margin-bottom: 108px;
+  }
+}
+
+}
+
 @media (max-width: 320px) {
 
   .mapa {

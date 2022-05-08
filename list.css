@@ -261,6 +261,69 @@ a:hover{
         font-size: 9px;
     }
 }
+@media (max-width:414px){
+    .lista-autos {
+        margin-left: 15px;
+    }
+    .inputBuscar {
+        width: 100%;
+        height: 27px;
+        font-size: 8px;
+    }
+    .divAutosUsados p {
+        font-size: 14px;
+        margin-left: 1px;
+    }
+    .divMostrarOcultarFiltros input {
+        margin-right: 136px;
+        background: transparent;
+        border: none;
+        font-size: 10px;
+        margin-left: -4px;
+        
+    }
+    .divAutosUsados {
+        width: 100%;
+        height: 25px;
+        display: block;
+    }
+    .div1 {
+        width: 283px;
+        height: 361px;
+        box-shadow: 0px 0px 3px 0px rgb(121 121 121);
+        margin: 5px 5px 5px 5px;
+        box-sizing: border-box;
+    }
+    select {
+        background: transparent;
+        border: none;
+        font-size: 8px;
+        height: 11px;
+        padding-left: 0px;
+        width: 100%;
+    }
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 37px;
+        margin-top: 15px;
+    }
+    .divFiltros {
+        margin-top: 6px;
+        border-top: 1px solid rgb(198, 197, 197);
+        width:100%;
+        height:0%;
+    }
+    .divExtras{
+        display: none;
+    }
+    .inputBuscar {
+        width: 100%;
+        height: 27px;
+        font-size: 8px;
+    }
+}
 @media (max-width:320px){
 
     .inputBuscar {
@@ -311,7 +374,6 @@ a:hover{
         margin-top: 15px;
     }
     .divFiltros {
-        float: left;
         margin-top: 6px;
         border-top: 1px solid rgb(198, 197, 197);
         width:100%;
