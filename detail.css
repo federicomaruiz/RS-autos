@@ -62,6 +62,7 @@ td {
   width: 700px;
   position: relative;
   margin-left: 120px;
+  margin-top: 50px;
 }
 .divDerecha {
   float: right;
@@ -142,7 +143,7 @@ td {
 }
 
 .bt-preguntar:hover {
-  background-color: #3482fa;;
+  background-color: #3482fa;
 }
 tbody {
   width: 100%;
@@ -174,9 +175,8 @@ th {
 h2 {
   margin-left: 21px;
 }
-.divOculto{
-
-  position:absolute;
+.divOculto {
+  position: absolute;
   margin: auto;
   width: 800px;
   height: 600px;
@@ -187,44 +187,36 @@ h2 {
   box-shadow: 0px 0px 0px 20000px rgb(36 29 86 / 88%);
 }
 
-.btCerrar{
-
-  float:right;
-  width:20px;
-  height:20px;
-  margin-right:5px;
-  margin-top:5px;
-
+.btCerrar {
+  float: right;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  margin-top: 5px;
 }
 
-.btCerrar img{
-  width:20px;
-  height:20px;
+.btCerrar img {
+  width: 20px;
+  height: 20px;
   background-size: cover;
-  cursor:pointer;
-  
+  cursor: pointer;
 }
-.divNombre{
+.divNombre {
   display: inline-grid;
-
 }
-.divApellido{
+.divApellido {
   display: inline-grid;
-
 }
-.divEmail{
+.divEmail {
   display: inline-grid;
-
 }
-.divTelefono{
+.divTelefono {
   display: inline-grid;
-
 }
-.divComentarios{
+.divComentarios {
   display: inline-grid;
-
 }
-.form_registro{
+.form_registro {
   display: flex;
   height: 100%;
   flex-direction: column;
@@ -233,11 +225,11 @@ h2 {
   justify-content: space-evenly;
   align-items: baseline;
 }
-.form_registro input{
-  width:300px;
-  height:40px;
+.form_registro input {
+  width: 300px;
+  height: 40px;
 }
-.comentarios{
+.comentarios {
   width: 307px;
   height: 391px;
 }
@@ -247,7 +239,7 @@ h2 {
 
 .slider {
   width: 600px;
-  height:546px;
+  height: 546px;
   text-align: center;
   /* overflow: hidden; */
 }
@@ -297,7 +289,7 @@ h2 {
 }
 /* .slides > div:target {
   /*   transform: scale(0.8); */
-/* } */ 
+/* } */
 .author-info {
   background: rgba(0, 0, 0, 0.75);
   color: white;
@@ -318,17 +310,14 @@ h2 {
   height: 100%;
   max-width: 800px;
   max-height: 500px;
- 
 }
 
-#main2Images img{
-
-  object-fit:cover;
+#main2Images img {
+  object-fit: cover;
 }
 
-#mainImages img{
-
-  object-fit:contain;
+#mainImages img {
+  object-fit: contain;
   min-width: 600px;
   min-height: 500px;
 }
@@ -353,13 +342,11 @@ h2 {
 }
 
 /* Don't need button navigation */
-@supports (scroll-snap-type) {
-
+/* @supports (scroll-snap-type) {
   .slider > a {
-    
-   display: none;
+    display: none;
   }
-}
+} */
 
 input#comprobar {
   background-color: rgb(140, 131, 131);
@@ -367,8 +354,274 @@ input#comprobar {
 }
 
 input#comprobar:hover {
+  background-color: rgb(169 159 159);
+}
+@media (max-width: 1024px) {
+  .divDerecha {
+    float: right;
+    position: absolute;
+    left: 485px;
+    top: 25px;
+    width: 400px;
+    height: 400px;
+    background-color: transparent;
+  }
+  #mainImages img {
+    object-fit: contain;
+    min-width: 500px;
+    min-height: 400px;
+  }
+  .splide__slide img {
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    max-height: 400px;
+  }
+  .splide.is-initialized,
+  .splide.is-rendered {
+    visibility: visible;
+    width: 79%;
+  }
+  h2 {
+    margin-top: 14px;
+  }
+  .divOculto {
+    width: 600px;
+  }
+}
+@media (max-width: 768px) {
+  .divDetail {
+    width: 850px;
+    position: relative;
+    margin-left: 10px;
+    margin-top: 50px;
+  }
+  .divDerecha {
+    float: right;
+    position: absolute;
+    left: 420px;
+    top: 25px;
+    width: 328px;
+    height: 400px;
+    background-color: transparent;
+  }
+  .divAnoKm p {
+    display: inline;
+    padding: 4px 4px 4px 4px;
+    color: rgb(140, 131, 131);
+    font-size: 15px;
+  }
+  .splide__slide img {
+    width: 100%;
+    height: 100%;
+    max-width: 450px;
+    max-height: 450px;
+  }
+  #mainImages img {
+    object-fit: contain;
+    min-width: 450px;
+    min-height: 450px;
+  }
+  .divMarcaModelo p {
+    font-size: 20px;
+  }
+  .divPrecio p {
+    font-size: 26px;
+  }
+  .splide.is-initialized,
+  .splide.is-rendered {
+    visibility: visible;
+    width: 50%;
+  }
+  .bt-preguntar {
+    background-color: #569aff;
+    color: white;
+    text-decoration: none;
+    padding: 13px 25px;
+    display: inline-block;
+    border-radius: 4px;
+    margin: 42px;
+    margin-left: 100px;
+    box-shadow: 0px 0px 3px 0px black;
+  }
+  h2 {
+    margin-top: 14px;
+    font-size: 24px;
+    margin-left: 47px;
+  }
+  .divAnoKm {
+    margin-top: 55px;
+  }
+  .divOculto {
+    position: absolute;
+    margin: auto;
+    width: 585px;
+    height: 600px;
+    background: antiquewhite;
+    top: 160px;
+    left: 150px;
+    box-shadow: black;
+    box-shadow: 0px 0px 0px 20000px rgb(36 29 86 / 88%);
+  }
+}
+@media (max-width: 480px) {
+  .divDerecha {
+    display: contents;
+  }
+  .bt-preguntar {
+    background-color: #569aff;
+    color: white;
+    text-decoration: none;
+    padding: 9px 19px;
+    display: inline-block;
+    border-radius: 4px;
+    margin: 24px;
+    margin-left: 100px;
+    box-shadow: 0px 0px 3px 0px black;
+  }
+  th {
+    font-size: 12px;
+  }
+  td {
+    font-size: 12px;
+  }
+  .divDescripcion {
+    margin-left: 30px;
+    font-size: 12px;
+  }
+  .divOculto {
+    position: absolute;
+    margin: auto;
+    width: 350px;
+    height: 580px;
+    background: antiquewhite;
+    top: 160px;
+    left: 65px;
+    box-shadow: black;
+    box-shadow: 0px 0px 0px 20000px rgb(36 29 86 / 88%);
+  }
+  .form_registro input {
+    width: 240px;
+    height: 30px;
+    margin-left: 20px;
+  }
+  label {
+    margin-left: 20px;
+  }
+  .divComentarios{
+    margin-left: 20px;
+  }
 
-  background-color:  rgb(169 159 159);
 
 }
+@media (max-width: 320px) {
+  .divDetail {
+    position: relative;
+    margin-left: 10px;
+    margin-top: 50px;
+    width: 745px;
+  }
+  #mainImages img {
+    object-fit: contain;
+    min-width: 311px;
+    min-height: 290px;
+  }
+  .splide__slide img {
+    width: 100%;
+    height: 100%;
+    max-width: 318px;
+    max-height: 400px;
+  }
+  .splide.is-initialized, .splide.is-rendered {
+    visibility: visible;
+    width: 38%;
+  }
+  h2 {
+    margin-top: 14px;
+  }
+  .divAnoKm p {
+    display: inline;
+    padding: 4px 4px 4px 4px;
+    color: rgb(140, 131, 131);
+    font-size: 12px;
+  }
+  .divMarcaModelo {
+    position: relative;
+    margin-top: 16px;
+    margin-left: -5px;
+  }
+  .divMarcaModelo p {
+    font-size: 15px;
+  }
+  .divAnoKm {
+    margin-top: 36px;
+    margin-left: 40px;
+  }
+  .divPrecio p {
+    font-size: 19px;
+  }
+  .bt-preguntar {
+    background-color: #569aff;
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    display: inline-block;
+    border-radius: 4px;
+    margin: 19px;
+    margin-left: 93px;
+    box-shadow: 0px 0px 3px 0px black;
+    font-size: 12px;
+  }
+  h2 {
+    margin-top: 14px;
+    font-size: 15px;
+  }
+  th {
+    font-size: 10px;
+  }
+  td {
+    text-align: center;
+    width: 50%;
+    font-size: 10px;
+    padding: 10px;
+  }
+  
+  .divDescripcion {
+    margin-left: 30px;
+    font-size: 10px;
+  }
+  .divOculto {
+    position: absolute;
+    margin: auto;
+    width: 300px;
+    height: 580px;
+    background: antiquewhite;
+    top: 165px;
+    left: 8px;
+    box-shadow: black;
+    box-shadow: 0px 0px 0px 20000px rgb(36 29 86 / 88%);
+  }
+  .form_registro input {
+    width: 226px;
+    height: 22px;
+    margin-left: 20px;
+  }
+  label {
+    margin-left: 20px;
+    font-size: 13px;
+  }
+  input#comprobar{
+    background-color: rgb(140, 131, 131);
+    border: 2px solid #555555;
+    height: 28px;
+  }
+  textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    font-size: 16px;
+  }
 
+
+}
