@@ -116,6 +116,7 @@ a{
 
    font-size: 22px;
    margin-left: 7px;
+   color: #001c72;
 }
   
 .divMostrarOcultarFiltros{
@@ -209,6 +210,7 @@ a:hover{
     .divAutosUsados p {
         font-size: 20px;
         margin-left: 7px;
+        color: #001c72;
     }
     .btFiltro {
         font-size: 13px;
@@ -230,6 +232,7 @@ a:hover{
     .divAutosUsados p {
         font-size: 17px;
         margin-left: 7px;
+        color: #001c72;
     }
     .divMostrarOcultarFiltros input {
         margin-right: 136px;
@@ -273,6 +276,7 @@ a:hover{
     .divAutosUsados p {
         font-size: 14px;
         margin-left: 1px;
+        color: #001c72;
     }
     .divMostrarOcultarFiltros input {
         margin-right: 136px;
@@ -336,6 +340,7 @@ a:hover{
     .divAutosUsados p {
         font-size: 14px;
         margin-left: 1px;
+        color: #001c72;
     }
     .divMostrarOcultarFiltros input {
         margin-right: 136px;
