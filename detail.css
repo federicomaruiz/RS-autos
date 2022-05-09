@@ -431,7 +431,7 @@ input#comprobar:hover {
   .splide.is-initialized,
   .splide.is-rendered {
     visibility: visible;
-    width: 50%;
+    width: 62%;
   }
   .bt-preguntar {
     background-color: #569aff;
@@ -465,19 +465,46 @@ input#comprobar:hover {
   }
 }
 @media (max-width: 480px) {
+  .tableData{
+    width:94%;
+  }
   .divDerecha {
     display: contents;
+  }
+  .divAnoKm {
+    position: absolute;
+    margin-top: 51px;
+    margin-left: 115px;
+  }
+  .divMarcaModelo {
+    position: relative;
+    margin-top: 16px;
+    margin-left: 67px;
+  } 
+  .divMarcaModelo p {
+    font-size: 18px;
+    margin-left: -5px;
+  }
+  .divPrecio p {
+    font-size: 28px;
+    margin-top: 46px;
+    margin-left: 40px;
   }
   .bt-preguntar {
     background-color: #569aff;
     color: white;
     text-decoration: none;
-    padding: 9px 19px;
+    padding: 5px 10px;
     display: inline-block;
+    position: sticky;
     border-radius: 4px;
-    margin: 24px;
-    margin-left: 100px;
+    margin-top: 27px;
     box-shadow: 0px 0px 3px 0px black;
+    font-size: 22px;
+    width: 39%;
+    margin-left: 50px;
+    margin-top: 19px;
+    padding-left: 113px;
   }
   th {
     font-size: 12px;
@@ -511,20 +538,29 @@ input#comprobar:hover {
   .divComentarios{
     margin-left: 20px;
   }
+  .splide.is-initialized, .splide.is-rendered {
+    visibility: visible;
+    width: 55%;
+  }
+  h2 {
+    margin-top: 14px;
+    font-size: 21px;
+    margin-left: 65px;
+  }
 
 
 }
 @media (max-width: 450px) {
   .divDetail {
     position: relative;
-    margin-left: 10px;
+    margin-left: 2px;
     margin-top: 50px;
     width: 917px;
   }
 
   #mainImages img {
     object-fit: contain;
-    min-width: 371px;
+    min-width: 400px;
     min-height: 346px;
   }
 
@@ -536,31 +572,35 @@ input#comprobar:hover {
   }
   .splide.is-initialized, .splide.is-rendered {
     visibility: visible;
-    width: 38%;
+    width: 44%;
   }
   h2 {
     margin-top: 14px;
   }
-  .divAnoKm p {
-    display: inline;
-    padding: 4px 4px 4px 4px;
-    color: rgb(140, 131, 131);
-    font-size: 12px;
+  .divAnoKm {
+    position: absolute;
+    margin-top: 51px;
+    margin-left: 88px;
   }
+  p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    margin-left: 20px;
+  }
+
   .divMarcaModelo {
     position: relative;
     margin-top: 16px;
+    margin-left: 37px;
+  } 
+  .divMarcaModelo p {
+    font-size: 18px;
     margin-left: -5px;
   }
-  .divMarcaModelo p {
-    font-size: 15px;
-  }
-  .divAnoKm {
-    margin-top: 36px;
-    margin-left: 40px;
-  }
   .divPrecio p {
-    font-size: 19px;
+    font-size: 28px;
+    margin-top: 46px;
+    margin-left: 10px;
   }
   .bt-preguntar {
     background-color: #569aff;
@@ -568,15 +608,20 @@ input#comprobar:hover {
     text-decoration: none;
     padding: 5px 10px;
     display: inline-block;
+    position: sticky;
     border-radius: 4px;
-    margin: 19px;
-    margin-left: 93px;
+    margin-top: 27px;
     box-shadow: 0px 0px 3px 0px black;
-    font-size: 12px;
+    font-size: 22px;
+    width: 39%;
+    margin-left: 20px;
+    margin-top: 19px;
+    padding-left: 124px;
   }
   h2 {
     margin-top: 14px;
-    font-size: 15px;
+    font-size: 21px;
+    margin-left: 65px;
   }
   th {
     font-size: 10px;
@@ -589,23 +634,24 @@ input#comprobar:hover {
   }
   
   .divDescripcion {
-    margin-left: 30px;
+    margin-left: 2px;
     font-size: 10px;
   }
+
   .divOculto {
     position: absolute;
     margin: auto;
-    width: 300px;
-    height: 580px;
+    width: 313px;
+    height: 560px;
     background: antiquewhite;
     top: 165px;
-    left: 8px;
+    left: 59px;
     box-shadow: black;
     box-shadow: 0px 0px 0px 20000px rgb(36 29 86 / 88%);
   }
   .form_registro input {
     width: 226px;
-    height: 22px;
+    height: 33px;
     margin-left: 20px;
   }
   label {
@@ -706,11 +752,11 @@ input#comprobar:hover {
   .divOculto {
     position: absolute;
     margin: auto;
-    width: 300px;
-    height: 580px;
+    width: 271px;
+    height: 472px;
     background: antiquewhite;
     top: 165px;
-    left: 8px;
+    left: 14px;
     box-shadow: black;
     box-shadow: 0px 0px 0px 20000px rgb(36 29 86 / 88%);
   }

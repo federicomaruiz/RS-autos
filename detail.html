@@ -161,7 +161,7 @@
 
                 <form action="https://formsubmit.co/3a15bebfb37a3692315956ec087284b9" method="POST"
                     class="form_registro">
-                    <div class="divNombre">
+                    <div class="divNombre" class="required">
                         <label for="name" class="label">Nombre</label>
                         <input name="name" type="text" id="nombre" class="required"
                             title="Por favor, rellena el nombre">
@@ -171,15 +171,15 @@
                         <input name="apellido" type="text" id="nombre" class="required"
                             title="Por favor, rellena el nombre">
                     </div>
-                    <div class="divEmail">
+                    <div class="divEmail"  class="required">
                         <label for="email" class="label">E-mail</label>
                         <input name="email" type="email" id="email">
                     </div>
                     <div class="divTelefono">
                         <label for="telefono" class="label">Telefono</label>
-                        <input name="telefono" type="text" id="telefono">
+                        <input name="telefono" type="number" id="telefono">
                     </div>
-                    <div class="divComentarios">
+                    <div class="divComentarios" class="required">
                         <label for="comentarios" class="label"></label>
                         <textarea name="comentarios" cols="60" rows="10" id="comentarios"
                             placeholder="Escribe tu pregunta.."></textarea>
@@ -187,7 +187,7 @@
 
                     <td colspan="2" align="center"><input type="submit" value="Enviar" id="comprobar"></td>
 
-                    <input type="hidden" name="_next" value="https://jazzy-medovik-006b1a.netlify.app/list.html">
+                    <input type="hidden" name="_next" value="https://rs-autos.netlify.app/list.html">
                     <input type="hidden" name="_captcha" value="false">
                 </form>
             </div>

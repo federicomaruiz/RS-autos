@@ -1,7 +1,7 @@
 .about-box {
   margin-top: 50px;
   float: right;
-  margin-right:125px;
+  margin-right: 125px;
 }
 .about-img {
   width: 540px;
@@ -18,6 +18,7 @@
   color: #0b0b0c;
   font-size: 36px;
   font-family: serif;
+  font-weight: bold;
 }
 .img-box-redonda {
   position: relative;
@@ -80,10 +81,9 @@ aside .fecha {
   margin-left: 29px;
   width: 40%;
   margin-left: 32px;
-  margin-left:120px;
+  margin-left: 120px;
 }
-@media (max-width:1024px){
-
+@media (max-width: 1024px) {
   .about-box {
     margin-top: 50px;
     float: right;
@@ -91,14 +91,15 @@ aside .fecha {
   }
   .about-h1 {
     margin: 0px;
-    margin-top:50px;
+    margin-top: 50px;
     margin-left: 120px;
-    margin-bottom:50px;
+    margin-bottom: 50px;
     padding-top: 39px;
     text-align: left;
     color: #0b0b0c;
     font-size: 24px;
     font-family: serif;
+    font-weight: bold;
   }
   .about-img {
     width: 500px;
@@ -108,13 +109,10 @@ aside .fecha {
   }
   aside {
     padding-left: 10px;
- }
-
+  }
 }
 
-
-@media (max-width:768px){
-
+@media (max-width: 768px) {
   .about-img {
     width: 400px;
     height: 500px;
@@ -131,15 +129,15 @@ aside .fecha {
     color: #0b0b0c;
     font-size: 20px;
     font-family: serif;
+    font-weight: bold;
   }
   .img-box-redonda {
     position: relative;
     background-size: cover;
     margin-left: 27px;
-    
   }
   .img-redonda {
-    margin-right:9px;
+    margin-right: 9px;
   }
   aside .nombre {
     color: #1f3b93;
@@ -163,16 +161,16 @@ aside .fecha {
     margin-bottom: -154px;
   }
 }
-@media (max-width:480px){
-
+@media (max-width: 480px) {
   .about-img {
     width: 250px;
     height: 389px;
     border-radius: 4px;
     border: 1px solid #f6f6f66e;
   }
-  .about-h1{
+  .about-h1 {
     font-size: 16px;
+    font-weight: bold;
   }
   .img-redonda {
     border-radius: 50%;
@@ -199,10 +197,10 @@ aside .fecha {
     width: 40%;
     margin-left: 24px;
   }
- .informacion-general {
-  display: inline-block;
-  text-align: start;
-  margin: 0px 229px 0px 250px;
+  .informacion-general {
+    display: inline-block;
+    text-align: start;
+    margin: 0px 229px 0px 250px;
   }
   .logo {
     height: 19px;
@@ -211,8 +209,7 @@ aside .fecha {
     margin-bottom: 14px;
   }
 }
-@media (max-width:450px){
-
+@media (max-width: 450px) {
   .about-img {
     width: 216px;
     height: 336px;
@@ -224,12 +221,13 @@ aside .fecha {
     margin-top: 0px;
     margin-left: 0px;
     margin-bottom: 17px;
+    font-weight: bold;
   }
   .img-redonda {
     border-radius: 50%;
     width: 25px;
     height: 25px;
-    margin-left:0px;
+    margin-left: 0px;
   }
   .img-redonda {
     border-radius: 50%;
@@ -266,13 +264,9 @@ aside .fecha {
     background-size: cover;
     margin-left: 0px;
   }
-
-
-
 }
 
-@media (max-width:320px){
-
+@media (max-width: 320px) {
   .about-img {
     width: 194px;
     height: 314px;
@@ -280,15 +274,16 @@ aside .fecha {
     border: 1px solid #f6f6f66e;
   }
   .about-h1 {
-      margin: 0px;
-      margin-top: 11px;
-      margin-left: 5px;
-      margin-bottom: 9px;
-      padding-top: 39px;
-      text-align: left;
-      color: #0b0b0c;
-      font-size: 12px;
-      font-family: serif;
+    margin: 0px;
+    margin-top: 11px;
+    margin-left: 5px;
+    margin-bottom: 9px;
+    padding-top: 39px;
+    text-align: left;
+    color: #0b0b0c;
+    font-size: 12px;
+    font-family: serif;
+    font-weight: bold;
   }
   .img-redonda {
     border-radius: 50%;
@@ -320,5 +315,4 @@ aside .fecha {
     margin: -2px;
     padding: 2px;
   }
-  
 }

@@ -92,8 +92,10 @@ header p {
   margin-bottom: 50px;
 }
 
-.btn-primary {
-  background-color: rgb(1, 93, 171);
+.btColor {
+  color: #fff;
+  background-color: #13448c;
+  border-color: #13448c;
   color: white;
   text-decoration: none;
   padding: 17px 21px;
@@ -103,8 +105,9 @@ header p {
   box-shadow: 0px 0px 2px 0px black;
 }
 
-.btn-primary:hover {
-  background-color: rgb(16, 99, 172);
+.btColor:hover {
+  background-color: #1f529d;
+  color:white;
   box-shadow: 0px 0px 4px 0px black;
 }
 
@@ -223,73 +226,63 @@ footer p {
   left: -70px;
   bottom: 674px;
 }
-.nav-item{
-  margin: 0px 55px ;
-  color:black;
+.nav-item {
+  margin: 0px 55px;
+  color: black;
 }
-.logoNav{
-  width:150px;
-}
-
-@media (max-width:1200px){
-
-  .container{
-    width:1200px;
-  }
-  .nav-item{
-    margin: 0px 25px ;
-  }
-  
-
-}
-@media (max-width:1060px){
-
-  .nav-item{
-    margin: 0px 22px ;
-  }
-
+.logoNav {
+  width: 150px;
 }
 
-@media (max-width:1024px){
-
-  .container{
-    width:1024px;
+@media (max-width: 1200px) {
+  .container {
+    width: 1200px;
   }
-  .nav-item{
-    margin: 0px 24px ;
+  .nav-item {
+    margin: 0px 25px;
   }
-
+}
+@media (max-width: 1060px) {
+  .nav-item {
+    margin: 0px 22px;
+  }
 }
 
-@media (max-width:768px){
+@media (max-width: 1024px) {
+  .container {
+    width: 1024px;
+  }
+  .nav-item {
+    margin: 0px 24px;
+  }
+}
 
-  .container{
-    width:768px;
+@media (max-width: 768px) {
+  .container {
+    width: 768px;
   }
   header h1 {
     font-size: 46px;
     color: #001c73;
     font-family: ui-monospace;
-  
-  } 
+  }
   header p {
     font-size: 14px;
     color: rgb(144, 144, 167);
     margin-bottom: 46px;
   }
- .btn-primary {
-  background-color: rgb(1, 93, 171);
-  color: white;
-  text-decoration: none;
-  padding: 12px 14px;
-  display: inline-block;
-  border-radius: 4px;
-  margin: 0;
-  box-shadow: 0px 0px 2px 0px black;
-  font-size: 11px;
+  .btColor {
+    color: white;
+    text-decoration: none;
+    padding: 12px 14px;
+    display: inline-block;
+    border-radius: 4px;
+    margin: 0;
+    box-shadow: 0px 0px 2px 0px black;
+    font-size: 11px;
   }
-  .divCentral{
-  height:570px;
+  .divCentral {
+    height: 570px;
   }
   .logo {
     height: 27px;
@@ -316,10 +309,9 @@ footer p {
     color: #6b7181;
   }
 }
-@media (max-width:480px){
-
-  .container{
-    width:480px;
+@media (max-width: 480px) {
+  .container {
+    width: 480px;
   }
   header h1 {
     font-size: 32px;
@@ -331,8 +323,7 @@ footer p {
     color: rgb(144, 144, 167);
     margin-bottom: 46px;
   }
-  .btn-primary {
-    background-color: rgb(1, 93, 171);
+  .btColor {
     color: white;
     text-decoration: none;
     padding: 9px 10px;
@@ -348,8 +339,8 @@ footer p {
   .logoNav {
     width: 125px;
   }
-  .box-links{
-    display:none;
+  .box-links {
+    display: none;
   }
   .logo {
     height: 27px;
@@ -369,20 +360,17 @@ footer p {
     margin-top: 12px;
     color: #6b7181;
   }
-
 }
-@media (max-width:320px){
-
+@media (max-width: 320px) {
   header h1 {
     font-size: 20px;
     color: #001c73;
-    font-family: ui-monospace;  
+    font-family: ui-monospace;
   }
   header p {
     font-size: 6px;
   }
-  .btn-primary {
-    background-color: rgb(1, 93, 171);
+  .btColor {
     color: white;
     text-decoration: none;
     padding: 9px 10px;
@@ -393,7 +381,7 @@ footer p {
     font-size: 6px;
   }
   .divCentral {
-    height: 351px; 
+    height: 351px;
   }
   .logo {
     height: 19px;
@@ -422,5 +410,4 @@ footer p {
     background-color: #fbfcff;
     padding-bottom: 40px;
   }
-  
 }
