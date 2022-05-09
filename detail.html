@@ -163,26 +163,26 @@
                     class="form_registro">
                     <div class="divNombre" class="required">
                         <label for="name" class="label">Nombre</label>
-                        <input name="name" type="text" id="nombre" class="required"
-                            title="Por favor, rellena el nombre">
+                        <input name="name" type="text" id="nombre" 
+                            title="Por favor, rellena el nombre" required>
                     </div>
                     <div class="divApellido">
                         <label for="apellido" class="label">Apellido</label>
-                        <input name="apellido" type="text" id="nombre" class="required"
-                            title="Por favor, rellena el nombre">
+                        <input name="apellido" type="text" id="nombre" 
+                            title="Por favor, rellena el apellido">
                     </div>
                     <div class="divEmail"  class="required">
                         <label for="email" class="label">E-mail</label>
-                        <input name="email" type="email" id="email">
+                        <input name="email" type="email" id="email" required>
                     </div>
                     <div class="divTelefono">
                         <label for="telefono" class="label">Telefono</label>
-                        <input name="telefono" type="number" id="telefono">
+                        <input name="telefono" type="number" id="telefono" max="10" min="10" >
                     </div>
-                    <div class="divComentarios" class="required">
+                    <div class="divComentarios" >
                         <label for="comentarios" class="label"></label>
                         <textarea name="comentarios" cols="60" rows="10" id="comentarios"
-                            placeholder="Escribe tu pregunta.."></textarea>
+                            placeholder="Escribe tu pregunta.." maxlength="255" required></textarea>
                     </div>
 
                     <td colspan="2" align="center"><input type="submit" value="Enviar" id="comprobar"></td>

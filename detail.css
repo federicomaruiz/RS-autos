@@ -580,12 +580,19 @@ input#comprobar:hover {
   .divAnoKm {
     position: absolute;
     margin-top: 51px;
-    margin-left: 88px;
+    margin-left: 85px;
   }
   p {
     margin-top: 0;
     margin-bottom: 1rem;
     margin-left: 20px;
+  }
+  .divAnoKm p{
+    display: inline;
+    padding: -3px 4px 4px 4px;
+    color: rgb(140, 131, 131);
+    font-size: 16px;
+
   }
 
   .divMarcaModelo {
