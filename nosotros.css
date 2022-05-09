@@ -43,8 +43,8 @@ aside .nombre {
   font-weight: bold;
 }
 aside .fecha {
-  color: #d8d8d8;
-  font-size: 14px;
+  color: #4a4a4a;
+  font-size: 12px;
   font-weight: 500;
 }
 .about {
@@ -74,10 +74,12 @@ aside .fecha {
   margin: 4px;
 }
 .about-p {
-  color: #9d9b9b;
+  color: #353535;
+  font-weight: 600;
   font-size: 15px;
   margin-left: 29px;
-  width:40%;
+  width: 40%;
+  margin-left: 32px;
   margin-left:120px;
 }
 @media (max-width:1024px){
@@ -145,12 +147,13 @@ aside .fecha {
     font-weight: bold;
   }
   aside .fecha {
-    color: #d8d8d8;
+    color: #4a4a4a;
     font-size: 12px;
     font-weight: 500;
   }
   .about-p {
-    color: #9d9b9b;
+    color: #353535;
+    font-weight: 600;
     font-size: 15px;
     margin-left: 29px;
     width: 40%;
@@ -181,7 +184,7 @@ aside .fecha {
     font-size: 9px;
   }
   aside .fecha {
-    color: #d8d8d8;
+    color: #4a4a4a;
     font-size: 8px;
   }
   aside p {
@@ -189,7 +192,8 @@ aside .fecha {
     padding: 1px;
   }
   .about-p {
-    color: #9d9b9b;
+    color: #353535;
+    font-weight: 600;
     font-size: 9px;
     margin-left: 29px;
     width: 40%;
@@ -237,11 +241,12 @@ aside .fecha {
     font-size: 7px;
   }
   aside .fecha {
-    color: #d8d8d8;
+    color: #4a4a4a;
     font-size: 6px;
   }
   .about-p {
-    color: #9d9b9b;
+    color: #353535;
+    font-weight: 600;
     font-size: 9px;
     width: 40%;
     margin-left: 0px;
@@ -300,11 +305,12 @@ aside .fecha {
     font-size: 7px;
   }
   aside .fecha {
-    color: #d8d8d8;
+    color: #4a4a4a;
     font-size: 6px;
   }
   .about-p {
-    color: #9d9b9b;
+    color: #353535;
+    font-weight: 600;
     font-size: 7px;
     margin-left: 29px;
     width: 40%;
