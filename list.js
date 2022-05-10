@@ -26,6 +26,10 @@ let ano;
 let modelo;
 let km;
 
+const loader = document.getElementById("loader");
+
+loader.style.display = "block";
+
 /* filtro de marca por peticion 
 async function searchList() {
   try {
@@ -90,7 +94,6 @@ function limpiar() {
   selectKm.value = "";
   busqueda.value = "";
 
-  // revisar solo borra 1 elemento del Option
   resetearModelo();
   resetearVersion();
 
@@ -200,6 +203,7 @@ async function search(rellenar) {
       throw new Error(message);
     }
 
+    loader.style.display = "none";
     printData(autos.data);
     console.log(autos);
 
@@ -212,6 +216,7 @@ async function search(rellenar) {
   } catch (error) {
     console.log(error);
   }
+  
 }
 
 function printData(autos) {
@@ -259,6 +264,8 @@ function printData(autos) {
     lista.appendChild(div5);
     lista.appendChild(div6);
 
+
+    div1.classList.add("overflow-hidden");
     div1.classList.add("div1");
     div2.classList.add("div2");
     div3.classList.add("div3");

@@ -35,6 +35,10 @@ const divOculto = document.getElementById("divOculto");
 const btCerrar = document.getElementById("btCerrar");
 const thumbnailcarousel = document.getElementById("thumbnail-carousel");
 
+const loader = document.getElementById("loader");
+
+loader.style.display = "block";
+
 async function getCar() {
   try {
     const url = api + `/api/autos/${id}`;
@@ -46,7 +50,8 @@ async function getCar() {
     if (!response.ok) {
       throw new Error(`Error: ${response.status}`);
     }
-
+    
+    loader.style.display = "none";
     printData(auto);
   } catch (error) {
     console.log(error);

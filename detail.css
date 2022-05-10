@@ -115,21 +115,6 @@ td {
   font-size: 35px;
 }
 
-.bt-reservar {
-  background-color: #e3edfb;
-  color: #3482fa;
-  text-decoration: none;
-  padding: 17px 21px;
-  display: inline-block;
-  border-radius: 4px;
-  margin: 35px;
-  box-shadow: 0px 0px 3px 0px black;
-}
-
-.bt-reservar:hover {
-  background-color: #f3f8ff;
-}
-
 .bt-preguntar {
   background-color: #569aff;
   color: white;
@@ -141,9 +126,9 @@ td {
   margin-left: 115px;
   box-shadow: 0px 0px 3px 0px black;
 }
-
 .bt-preguntar:hover {
   background-color: #3482fa;
+  color: white;
 }
 tbody {
   width: 100%;
@@ -356,6 +341,7 @@ input#comprobar {
 input#comprobar:hover {
   background-color: rgb(169 159 159);
 }
+
 @media (max-width: 1024px) {
   .divDerecha {
     float: right;
