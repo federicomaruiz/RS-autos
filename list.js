@@ -10,7 +10,9 @@ const selectMarca = document.getElementById("marca");
 
 const btClear = document.getElementById("limpiar");
 const btMostrarFiltros = document.getElementById("mostrarFiltros");
+const iconMostrar = document.getElementById("iconMostrar")
 const btOcultarFiltros = document.getElementById("ocultarFiltros");
+const iconOcultar = document.getElementById("iconOcultar")
 const btBuscar = document.getElementById("btBuscar");
 
 const divFiltros = document.getElementById("divFiltros");
@@ -58,6 +60,22 @@ btBuscar.addEventListener("click", () => {
 });
 
 */
+function iconOcultarFiltros(){
+
+  selectModelo.style.display = "none";
+  selectMarca.style.display = "none";
+  selectAno.style.display = "none";
+  selectVersion.style.display = "none";
+  selectKm.style.display = "none";
+  btOcultarFiltros.style.display = "none";
+  btMostrarFiltros.style.display = "inline-block";
+  divFiltros.style.display = "none";
+  btClear.style.display = "none";
+  iconOcultar.style.display = "none"
+  iconMostrar.style.display = "inline-block"
+
+
+}
 
 btOcultarFiltros.addEventListener("click", () => {
   selectModelo.style.display = "none";
@@ -69,7 +87,29 @@ btOcultarFiltros.addEventListener("click", () => {
   btMostrarFiltros.style.display = "inline-block";
   divFiltros.style.display = "none";
   btClear.style.display = "none";
+  iconOcultar.style.display = "none"
+  iconMostrar.style.display = "inline-block"
 });
+
+function iconMostrarFiltros(){
+
+  selectModelo.style.display = "inline-block";
+  selectMarca.style.display = "inline-block";
+  selectAno.style.display = "inline-block";
+  selectVersion.style.display = "inline-block";
+  selectKm.style.display = "inline-block";
+  btMostrarFiltros.style.display = "none";
+  btOcultarFiltros.style.display = "inline-block";
+  divFiltros.style.display = "block";
+  btClear.style.display = "inline";
+  iconMostrar.style.display = "none";
+  iconOcultar.style.display = "inline-block";
+
+
+  limpiar();
+
+
+}
 
 btMostrarFiltros.addEventListener("click", () => {
   selectModelo.style.display = "inline-block";
@@ -81,6 +121,8 @@ btMostrarFiltros.addEventListener("click", () => {
   btOcultarFiltros.style.display = "inline-block";
   divFiltros.style.display = "block";
   btClear.style.display = "inline";
+  iconMostrar.style.display = "none";
+  iconOcultar.style.display = "inline-block";
 
   limpiar();
 });

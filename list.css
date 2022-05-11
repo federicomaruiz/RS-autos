@@ -120,7 +120,8 @@ a{
 }
   
 .divMostrarOcultarFiltros{
-    width:50%;
+
+    width:80%;
 }
 .divMostrarOcultarFiltros input{
     margin-right: 136px; 
