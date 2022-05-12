@@ -44,7 +44,9 @@
                             <a class="nav-link active" href="list.html">Comprar un auto</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="#"><option disabled="disabled" >Cotiza tu auto </option></a>
+                            <a class="nav-link active" href="#">
+                                <option disabled="disabled">Cotiza tu auto </option>
+                            </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" href="contacto.html">Contacto 🇦🇷</a>
@@ -54,7 +56,12 @@
                 </div>
             </div>
         </nav>
-        <div id="loader" class="lds-ring"><div></div><div></div><div></div><div></div></div>
+        <div id="loader" class="lds-ring">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
         <div class="divDetail container">
 
             <section id="image-carousel" class="splide" aria-label="Beautiful Images">
@@ -164,23 +171,21 @@
                     class="form_registro">
                     <div class="divNombre" class="required">
                         <label for="name" class="label">Nombre</label>
-                        <input name="name" type="text" id="nombre" 
-                            title="Por favor, rellena el nombre" required>
+                        <input name="name" type="text" id="nombre" title="Por favor, rellena el nombre" required>
                     </div>
                     <div class="divApellido">
                         <label for="apellido" class="label">Apellido</label>
-                        <input name="apellido" type="text" id="nombre" 
-                            title="Por favor, rellena el apellido">
+                        <input name="apellido" type="text" id="nombre" title="Por favor, rellena el apellido">
                     </div>
-                    <div class="divEmail"  class="required">
+                    <div class="divEmail" class="required">
                         <label for="email" class="label">E-mail</label>
                         <input name="email" type="email" id="email" required>
                     </div>
                     <div class="divTelefono">
                         <label for="telefono" class="label">Telefono</label>
-                        <input name="telefono" type="number" id="telefono" >
+                        <input name="telefono" type="number" id="telefono">
                     </div>
-                    <div class="divComentarios" >
+                    <div class="divComentarios">
                         <label for="comentarios" class="label"></label>
                         <textarea name="comentarios" cols="60" rows="10" id="comentarios"
                             placeholder="Escribe tu pregunta.." maxlength="255" required></textarea>
@@ -220,10 +225,12 @@
 
 
             <div class="box-links">
-                <a href="#">Inicio</a>
-                <a href="#">Nosotros</a>
-                <a href="#">Comprar un auto</a>
-                <a href="#">Vender tu auto</a>
+                <a href="index.html">Inicio</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="list.html">Comprar un auto</a>
+                <a href="#">
+                    <option disabled="disabled"> Vender tu auto</option>
+                </a>
             </div>
 
             <div class="social">

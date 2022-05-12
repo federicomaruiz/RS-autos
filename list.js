@@ -13,7 +13,6 @@ const btMostrarFiltros = document.getElementById("mostrarFiltros");
 const iconMostrar = document.getElementById("iconMostrar")
 const btOcultarFiltros = document.getElementById("ocultarFiltros");
 const iconOcultar = document.getElementById("iconOcultar")
-const btBuscar = document.getElementById("btBuscar");
 
 const divFiltros = document.getElementById("divFiltros");
 
@@ -29,38 +28,34 @@ let modelo;
 let km;
 
 const loader = document.getElementById("loader");
-
 loader.style.display = "block";
 
-/* filtro de marca por peticion 
-async function searchList() {
-  try {
-    const search = document.getElementById("search");
 
-    const response = await fetch(
-      `http://localhost:1337/api/autos?filters[marca][$containsi]=${search.value}`
-      https://rs-autos.herokuapp.com/api/autos....
-    );
-    const busquedaAuto = await response.json();
 
-    if (!response.ok) {
-      throw new Error(`Error: ${response.status}`);
-    }
-    console.log(search.value)
-    printData(busquedaAuto);
-  } catch (error) {
-    console.log(error);
-  }
+const inputHandler = function(e) {
+
+
+  let result = e.target.value;
+
+  autosFiltrados = autos.data.filter((auto) =>{
+
+    return auto.attributes.marca.toLowerCase().includes(result.toLowerCase()) || (auto.attributes.modelo.toLowerCase().includes(result.toLowerCase())) || (auto.attributes.ano == result) || (auto.attributes.version.toLowerCase().includes(result.toLowerCase())) ;
+
+  });
+
+  printData(autosFiltrados);
+
 }
+busqueda.addEventListener('input', inputHandler);
+busqueda.addEventListener('propertychange', inputHandler);
 
 
-btBuscar.addEventListener("click", () => {
-  searchList();
-  
-});
 
-*/
+
+
+
 function iconOcultarFiltros(){
+
 
   selectModelo.style.display = "none";
   selectMarca.style.display = "none";
@@ -235,10 +230,14 @@ function mostrarVersion() {
 
 async function search(rellenar) {
   try {
+
+    // let response = await fetch(`https://rs-autos.herokuapp.com/api/autos`)
     let response = await fetch(api + "/api/autos");
+
     autos = await response.json();
 
     autosFiltrados = autos.data;
+
 
     if (!response.ok) {
       const message = `Error: ${response.status}`;
@@ -265,11 +264,7 @@ function printData(autos) {
   const lista = document.getElementById("lista");
   lista.innerHTML = "";
 
-  // haciendo un if (autosFiltrados == "") mostrar todos los autos sino mostrar autosFiltrados ( quiero mostrar solo los filtrados)
-  // y que los filtros vayan haciendo efectos unos sobre otros año y marca, sobre modelo version
-
   for (const auto of autos) {
-    // falta agregar version tambien en BBDD
 
     const div1 = document.createElement("div");
     const div2 = document.createElement("div");
