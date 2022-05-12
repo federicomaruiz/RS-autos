@@ -41,6 +41,9 @@ body {
   text-decoration: none;
   color: black;
 }
+.box-links a:hover{
+  color:black;
+}
 
 .box-links {
   width: 75%;
