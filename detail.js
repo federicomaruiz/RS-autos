@@ -50,7 +50,7 @@ async function getCar() {
     if (!response.ok) {
       throw new Error(`Error: ${response.status}`);
     }
-    
+
     loader.style.display = "none";
     printData(auto);
   } catch (error) {
@@ -59,7 +59,6 @@ async function getCar() {
 }
 
 function printData(auto) {
-
   lista.innerHTML = "";
 
   pAno.textContent = auto.data.attributes.ano;
@@ -81,36 +80,34 @@ function printData(auto) {
   tdCarroceria.textContent = auto.data.attributes.carroceria;
   tdKm.textContent = auto.data.attributes.kilometros;
 
-
   console.log(auto.data.attributes.imagenes);
 
-  
   let allImages = "";
 
-  for (const img of auto.data.attributes.imagenes) { 
-
-    let mainImage = ` <li class="splide__slide">
-    <img src="`+img+`"
+  for (const img of auto.data.attributes.imagenes) {
+    let mainImage =
+      ` <li class="splide__slide">
+    <img src="` +
+      img +
+      `"
         alt="" />
-    </li>`
+    </li>`;
 
-    allImages += mainImage
-    
-  
-  } 
+    allImages += mainImage;
+  }
 
-  document.getElementById("mainImages").innerHTML= allImages
+  document.getElementById("mainImages").innerHTML = allImages;
 
-  document.getElementById("main2Images").innerHTML= allImages
+  document.getElementById("main2Images").innerHTML = allImages;
 
   var main = new Splide("#image-carousel", {
     type: "fade",
     rewind: true,
     pagination: false,
-    arrows: false
-});
+    arrows: false,
+  });
 
-var thumbnails = new Splide("#thumbnail-carousel", {
+  var thumbnails = new Splide("#thumbnail-carousel", {
     fixedWidth: 100,
     fixedHeight: 60,
     gap: 10,
@@ -118,30 +115,26 @@ var thumbnails = new Splide("#thumbnail-carousel", {
     pagination: false,
     isNavigation: true,
     breakpoints: {
-        600: {
-            fixedWidth: 60,
-            fixedHeight: 44
-        }
-    }
-});
+      600: {
+        fixedWidth: 60,
+        fixedHeight: 44,
+      },
+    },
+  });
 
-main.sync(thumbnails);
-main.mount();
-thumbnails.mount();
+  main.sync(thumbnails);
+  main.mount();
+  thumbnails.mount();
 }
 
 btPreguntar.addEventListener("click", () => {
   divOculto.style.display = "block";
   thumbnailcarousel.style.display = "none";
-
-
 });
 
 btCerrar.addEventListener("click", () => {
   divOculto.style.display = "none";
   thumbnailcarousel.style.display = "block";
-
- 
 });
 
 getCar();

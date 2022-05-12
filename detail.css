@@ -451,8 +451,8 @@ input#comprobar:hover {
   }
 }
 @media (max-width: 480px) {
-  .tableData{
-    width:94%;
+  .tableData {
+    width: 94%;
   }
   .divDerecha {
     display: contents;
@@ -466,7 +466,7 @@ input#comprobar:hover {
     position: relative;
     margin-top: 16px;
     margin-left: 67px;
-  } 
+  }
   .divMarcaModelo p {
     font-size: 18px;
     margin-left: -5px;
@@ -521,10 +521,11 @@ input#comprobar:hover {
   label {
     margin-left: 20px;
   }
-  .divComentarios{
+  .divComentarios {
     margin-left: 20px;
   }
-  .splide.is-initialized, .splide.is-rendered {
+  .splide.is-initialized,
+  .splide.is-rendered {
     visibility: visible;
     width: 55%;
   }
@@ -533,8 +534,6 @@ input#comprobar:hover {
     font-size: 21px;
     margin-left: 65px;
   }
-
-
 }
 @media (max-width: 450px) {
   .divDetail {
@@ -556,7 +555,8 @@ input#comprobar:hover {
     max-width: 371px;
     max-height: 446px;
   }
-  .splide.is-initialized, .splide.is-rendered {
+  .splide.is-initialized,
+  .splide.is-rendered {
     visibility: visible;
     width: 44%;
   }
@@ -574,19 +574,18 @@ input#comprobar:hover {
     margin-left: 8px;
   }
 
-  .divAnoKm p{
+  .divAnoKm p {
     display: inline;
     padding: -3px 4px 4px 4px;
     color: rgb(140, 131, 131);
     font-size: 16px;
-
   }
 
   .divMarcaModelo {
     position: relative;
     margin-top: 16px;
     margin-left: 37px;
-  } 
+  }
   .divMarcaModelo p {
     font-size: 18px;
     margin-left: -5px;
@@ -627,7 +626,7 @@ input#comprobar:hover {
     font-size: 10px;
     padding: 10px;
   }
-  
+
   .divDescripcion {
     margin-left: 2px;
     font-size: 10px;
@@ -653,7 +652,7 @@ input#comprobar:hover {
     margin-left: 20px;
     font-size: 13px;
   }
-  input#comprobar{
+  input#comprobar {
     background-color: rgb(140, 131, 131);
     border: 2px solid #555555;
     height: 28px;
@@ -665,7 +664,6 @@ input#comprobar:hover {
     line-height: inherit;
     font-size: 16px;
   }
-
 }
 @media (max-width: 320px) {
   .divDetail {
@@ -686,7 +684,8 @@ input#comprobar:hover {
     max-width: 318px;
     max-height: 400px;
   }
-  .splide.is-initialized, .splide.is-rendered {
+  .splide.is-initialized,
+  .splide.is-rendered {
     visibility: visible;
     width: 38%;
   }
@@ -739,7 +738,7 @@ input#comprobar:hover {
     font-size: 10px;
     padding: 10px;
   }
-  
+
   .divDescripcion {
     margin-left: 30px;
     font-size: 10px;
@@ -764,7 +763,7 @@ input#comprobar:hover {
     margin-left: 20px;
     font-size: 13px;
   }
-  input#comprobar{
+  input#comprobar {
     background-color: rgb(140, 131, 131);
     border: 2px solid #555555;
     height: 28px;
@@ -776,6 +775,4 @@ input#comprobar:hover {
     line-height: inherit;
     font-size: 16px;
   }
-
-
 }

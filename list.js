@@ -10,9 +10,9 @@ const selectMarca = document.getElementById("marca");
 
 const btClear = document.getElementById("limpiar");
 const btMostrarFiltros = document.getElementById("mostrarFiltros");
-const iconMostrar = document.getElementById("iconMostrar")
+const iconMostrar = document.getElementById("iconMostrar");
 const btOcultarFiltros = document.getElementById("ocultarFiltros");
-const iconOcultar = document.getElementById("iconOcultar")
+const iconOcultar = document.getElementById("iconOcultar");
 
 const divFiltros = document.getElementById("divFiltros");
 
@@ -30,33 +30,25 @@ let km;
 const loader = document.getElementById("loader");
 loader.style.display = "block";
 
-
-
-const inputHandler = function(e) {
-
-
+const inputHandler = function (e) {
   let result = e.target.value;
 
-  autosFiltrados = autos.data.filter((auto) =>{
-
-    return auto.attributes.marca.toLowerCase().includes(result.toLowerCase()) || (auto.attributes.modelo.toLowerCase().includes(result.toLowerCase())) || (auto.attributes.ano == result) || (auto.attributes.version.toLowerCase().includes(result.toLowerCase())) ;
-
+  autosFiltrados = autos.data.filter((auto) => {
+    return (
+      auto.attributes.marca.toLowerCase().includes(result.toLowerCase()) ||
+      auto.attributes.modelo.toLowerCase().includes(result.toLowerCase()) ||
+      auto.attributes.ano == result ||
+      auto.attributes.version.toLowerCase().includes(result.toLowerCase())
+    );
   });
 
   printData(autosFiltrados);
+};
 
-}
-busqueda.addEventListener('input', inputHandler);
-busqueda.addEventListener('propertychange', inputHandler);
+busqueda.addEventListener("input", inputHandler);
+busqueda.addEventListener("propertychange", inputHandler);
 
-
-
-
-
-
-function iconOcultarFiltros(){
-
-
+function iconOcultarFiltros() {
   selectModelo.style.display = "none";
   selectMarca.style.display = "none";
   selectAno.style.display = "none";
@@ -65,11 +57,8 @@ function iconOcultarFiltros(){
   btOcultarFiltros.style.display = "none";
   btMostrarFiltros.style.display = "inline-block";
   divFiltros.style.display = "none";
-  btClear.style.display = "none";
-  iconOcultar.style.display = "none"
-  iconMostrar.style.display = "inline-block"
-
-
+  iconOcultar.style.display = "none";
+  iconMostrar.style.display = "inline-block";
 }
 
 btOcultarFiltros.addEventListener("click", () => {
@@ -81,13 +70,11 @@ btOcultarFiltros.addEventListener("click", () => {
   btOcultarFiltros.style.display = "none";
   btMostrarFiltros.style.display = "inline-block";
   divFiltros.style.display = "none";
-  btClear.style.display = "none";
-  iconOcultar.style.display = "none"
-  iconMostrar.style.display = "inline-block"
+  iconOcultar.style.display = "none";
+  iconMostrar.style.display = "inline-block";
 });
 
-function iconMostrarFiltros(){
-
+function iconMostrarFiltros() {
   selectModelo.style.display = "inline-block";
   selectMarca.style.display = "inline-block";
   selectAno.style.display = "inline-block";
@@ -96,14 +83,10 @@ function iconMostrarFiltros(){
   btMostrarFiltros.style.display = "none";
   btOcultarFiltros.style.display = "inline-block";
   divFiltros.style.display = "block";
-  btClear.style.display = "inline";
   iconMostrar.style.display = "none";
   iconOcultar.style.display = "inline-block";
 
-
   limpiar();
-
-
 }
 
 btMostrarFiltros.addEventListener("click", () => {
@@ -115,7 +98,6 @@ btMostrarFiltros.addEventListener("click", () => {
   btMostrarFiltros.style.display = "none";
   btOcultarFiltros.style.display = "inline-block";
   divFiltros.style.display = "block";
-  btClear.style.display = "inline";
   iconMostrar.style.display = "none";
   iconOcultar.style.display = "inline-block";
 
@@ -141,9 +123,8 @@ function limpiar() {
 }
 
 selectAno.addEventListener("change", () => {
-
   selectMarca.value = "";
-  selectKm.value="";
+  selectKm.value = "";
 
   selectModelo.disabled = true;
   selectVersion.disabled = true;
@@ -154,14 +135,12 @@ selectAno.addEventListener("change", () => {
   ano = selectAno.value;
   autosFiltrados = autos.data.filter((auto) => auto.attributes.ano == ano);
   printData(autosFiltrados);
-
 });
 
 selectMarca.addEventListener("change", () => {
-
   selectKm.value = "";
-  selectAno.value="";
-  
+  selectAno.value = "";
+
   resetearModelo();
   resetearVersion();
 
@@ -200,7 +179,7 @@ selectVersion.addEventListener("change", () => {
 
 selectKm.addEventListener("change", () => {
   selectMarca.value = "";
-  selectAno.value="";
+  selectAno.value = "";
 
   selectModelo.disabled = true;
   selectVersion.disabled = true;
@@ -230,14 +209,11 @@ function mostrarVersion() {
 
 async function search(rellenar) {
   try {
-
-    // let response = await fetch(`https://rs-autos.herokuapp.com/api/autos`)
     let response = await fetch(api + "/api/autos");
 
     autos = await response.json();
 
     autosFiltrados = autos.data;
-
 
     if (!response.ok) {
       const message = `Error: ${response.status}`;
@@ -257,7 +233,6 @@ async function search(rellenar) {
   } catch (error) {
     console.log(error);
   }
-  
 }
 
 function printData(autos) {
@@ -265,7 +240,6 @@ function printData(autos) {
   lista.innerHTML = "";
 
   for (const auto of autos) {
-
     const div1 = document.createElement("div");
     const div2 = document.createElement("div");
     const div3 = document.createElement("div");
@@ -300,7 +274,6 @@ function printData(autos) {
     lista.appendChild(div4);
     lista.appendChild(div5);
     lista.appendChild(div6);
-
 
     div1.classList.add("overflow-hidden");
     div1.classList.add("div1");
@@ -452,9 +425,3 @@ function resetearVersion() {
     }
   }
 }
-
-/* autosOrdenados = autos.sort();
-
-console.log(autosOrdenados);
-
-printData(autosOrdenados); */

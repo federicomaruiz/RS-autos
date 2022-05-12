@@ -22,19 +22,19 @@
   font-weight: 900;
 }
 
-.espaciado{
+.espaciado {
   margin-top: 45px;
   margin-bottom: 45px;
 }
 .divEmpresa {
-  margin-top:30px
+  margin-top: 30px;
 }
 @media (max-width: 1024px) {
-  .mapa{
-    width:550px;
-    height:550px;
+  .mapa {
+    width: 550px;
+    height: 550px;
   }
-  .divInfoContacto{
+  .divInfoContacto {
     height: 400px;
     width: 400px;
     float: right;
@@ -46,19 +46,17 @@
     margin-bottom: 1rem;
     font-size: 16px;
   }
-  .pTitulo{
+  .pTitulo {
     font-size: 22px;
-    margin-top:10px;
+    margin-top: 10px;
   }
-
 }
 @media (max-width: 768px) {
-
-  .mapa{
-    width:450px;
-    height:450px;
+  .mapa {
+    width: 450px;
+    height: 450px;
   }
-  .divInfoContacto{
+  .divInfoContacto {
     height: 250px;
     width: 250px;
     float: right;
@@ -70,18 +68,17 @@
     margin-bottom: 1rem;
     font-size: 13px;
   }
-  .pTitulo{
+  .pTitulo {
     font-size: 16px;
-    margin-top:5px;
+    margin-top: 5px;
   }
-  .espaciado{
-  margin-top: 30px;
-  margin-bottom: 30px;
+  .espaciado {
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
   .divEmpresa {
-  margin-top:5px
+    margin-top: 5px;
   }
-
 }
 @media (max-width: 480px) {
   .mapa {
@@ -98,18 +95,16 @@
     margin-bottom: 207px;
     margin-right: 10px;
     display: block;
-    width: 95%;;
+    width: 95%;
   }
-
 }
 @media (max-width: 450px) {
-
   .mapa {
-    width: 400px;;
+    width: 400px;
     height: 310px;
-    margin-left:5px;
+    margin-left: 5px;
     margin-right: 5px;
-    margin-top:22px;
+    margin-top: 22px;
   }
   .pTitulo {
     font-size: 12px;
@@ -121,24 +116,22 @@
     margin-bottom: 1rem;
     font-size: 10px;
   }
-  .espaciado{
+  .espaciado {
     margin-top: 15px;
     margin-bottom: 15px;
   }
   .divInfoContacto {
-
     margin-bottom: 108px;
   }
 }
 
 @media (max-width: 320px) {
-
   .mapa {
     width: 311px;
     height: 310px;
-    margin-left:5px;
+    margin-left: 5px;
     margin-right: 5px;
-    margin-top:22px;
+    margin-top: 22px;
   }
   .pTitulo {
     font-size: 12px;
@@ -150,12 +143,11 @@
     margin-bottom: 1rem;
     font-size: 10px;
   }
-  .espaciado{
+  .espaciado {
     margin-top: 15px;
     margin-bottom: 15px;
   }
   .divInfoContacto {
-
     margin-bottom: 108px;
   }
 }

@@ -41,8 +41,8 @@ body {
   text-decoration: none;
   color: black;
 }
-.box-links a:hover{
-  color:black;
+.box-links a:hover {
+  color: black;
 }
 
 .box-links {
@@ -110,7 +110,7 @@ header p {
 
 .btColor:hover {
   background-color: #1f529d;
-  color:white;
+  color: white;
   box-shadow: 0px 0px 4px 0px black;
 }
 
@@ -238,7 +238,7 @@ footer p {
 }
 .lds-ring {
   display: inline-block;
-  margin:auto;
+  margin: auto;
   position: relative;
   width: 100px;
   height: 100px;
@@ -263,6 +263,9 @@ footer p {
 }
 .lds-ring div:nth-child(3) {
   animation-delay: -0.15s;
+}
+.disabled {
+  cursor: not-allowed;
 }
 
 @keyframes lds-ring {
@@ -451,4 +454,3 @@ footer p {
     padding-bottom: 40px;
   }
 }
-
