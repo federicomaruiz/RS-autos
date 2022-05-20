@@ -80,6 +80,9 @@ function printData(auto) {
   tdCarroceria.textContent = auto.data.attributes.carroceria;
   tdKm.textContent = auto.data.attributes.kilometros;
 
+
+  btPreguntar.href = `https://wa.me/+5491151116076/?text=Estoy%20interesado%20en%20el%20auto+${auto.data.attributes.marca}+${auto.data.attributes.modelo}+${auto.data.attributes.ano}+${auto.data.attributes.version}`
+
   console.log(auto.data.attributes.imagenes);
 
   let allImages = "";
@@ -95,7 +98,7 @@ function printData(auto) {
 
     allImages += mainImage;
   }
-
+  
   document.getElementById("mainImages").innerHTML = allImages;
 
   document.getElementById("main2Images").innerHTML = allImages;
@@ -127,7 +130,7 @@ function printData(auto) {
   thumbnails.mount();
 }
 
-btPreguntar.addEventListener("click", () => {
+/* btPreguntar.addEventListener("click", () => {
   divOculto.style.display = "block";
   thumbnailcarousel.style.display = "none";
 });
@@ -135,6 +138,6 @@ btPreguntar.addEventListener("click", () => {
 btCerrar.addEventListener("click", () => {
   divOculto.style.display = "none";
   thumbnailcarousel.style.display = "block";
-});
+}); */
 
 getCar();
