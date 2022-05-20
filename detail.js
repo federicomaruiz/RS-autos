@@ -81,7 +81,7 @@ function printData(auto) {
   tdKm.textContent = auto.data.attributes.kilometros;
 
 
-  btPreguntar.href = `https://wa.me/+5491151116076/?text=Estoy%20interesado%20en%20el%20vehículo+${auto.data.attributes.marca}+${auto.data.attributes.modelo}+${auto.data.attributes.ano}+${auto.data.attributes.version}`
+  btPreguntar.href = `https://wa.me/+5491151116076/?text=Vi%20el%20anuncio%20en%20la%20página%20web%20del%20vehículo+${auto.data.attributes.marca}+${auto.data.attributes.modelo}+${auto.data.attributes.ano}+${auto.data.attributes.version}`
 
   console.log(auto.data.attributes.imagenes);
 
